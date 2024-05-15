@@ -6,7 +6,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 
 
 ### Features
-Each of this dataset has this features:
+Each of this dataset has those features:
  - timestamp: time in seconds since system  boot (float)
  - processId: id of the process spawning this log (integer)
  - threadId: id of the thread (integer)
@@ -23,3 +23,21 @@ Each of this dataset has this features:
  - args: arguments passed to this process (list of dictionaries)
  - sus: label (0/1) for suspicious activity (integer)
  - evil: label (0/1) for evil activity (integer)
+
+### Training dataset
+
+
+### Validation dataset
+
+### Testing dataset
+
+
+## Data preparation
+### StackAddresses
+### Args
+### Ordinal encoding
+### Scaling
+### Smote:
+Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
+To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
+SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
