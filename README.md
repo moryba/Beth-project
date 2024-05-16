@@ -14,7 +14,7 @@ Moreover, The BETH dataset fills a critical gap in cybersecurity research by pro
 - BETH’s features are highly structured but heterogeneous.
 - This diversity mirrors the complexity of real-world cybersecurity data.
 - Features include network traffic statistics, system logs, and process-level information.
-- 
+  
 **Scale and realism of the BETH dataset:**
 - BETH is one of the largest publicly available cybersecurity datasets.
 - It captures contemporary host behavior, including modern attacks.
