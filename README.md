@@ -1,9 +1,11 @@
 # Beth-project
 
 ## Introduction 
-The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models.
+The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models. 
 
-## Dataset Overview
+Moreover, The BETH dataset fills a critical gap in cybersecurity research by providing real-world, labeled data. Its scale, diversity, and structured heterogeneity make it an invaluable resource for advancing anomaly detection techniques and enhancing the robustness of machine learning models in the cybersecurity domain.
+
+### Dataset Overview
 **Size and Composition:**
 - BETH comprises over eight million data points collected from 23 hosts.
 - Each host records both benign activity (normal behavior) and, at most, one attack.
@@ -14,7 +16,7 @@ The BETH dataset addresses a critical need in cybersecurity research: the availa
 - This diversity mirrors the complexity of real-world cybersecurity data.
 - Features include network traffic statistics, system logs, and process-level information.
 
-## Property of BETH
+### Property of BETH
 **Scale and realism:**
 - BETH is one of the largest publicly available cybersecurity datasets.
 - It captures contemporary host behavior, including modern attacks.
@@ -28,9 +30,6 @@ The BETH dataset addresses a critical need in cybersecurity research: the availa
 - BETH enables evaluating the robustness of machine learning models.
 - Researchers can assess how well their algorithms generalize to unseen attacks.
 - It serves as a benchmark for novel anomaly detection techniques.
-
-## Conclusion
-The BETH dataset fills a critical gap in cybersecurity research by providing real-world, labeled data. Its scale, diversity, and structured heterogeneity make it an invaluable resource for advancing anomaly detection techniques and enhancing the robustness of machine learning models in the cybersecurity domain.
 
 ## Data analysis
 The Beth datset represents more than 8 milions events collected over 23 honeypots, only nearly 1 milion of it will be used on this project.
