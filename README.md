@@ -5,19 +5,17 @@ The BETH dataset addresses a critical need in cybersecurity research: the availa
 
 Moreover, The BETH dataset fills a critical gap in cybersecurity research by providing real-world, labeled data. Its scale, diversity, and structured heterogeneity make it an invaluable resource for advancing anomaly detection techniques and enhancing the robustness of machine learning models in the cybersecurity domain.
 
-### Dataset Overview
-**Size and Composition:**
+**Size and Composition of the dataset:**
 - BETH comprises over eight million data points collected from 23 hosts.
 - Each host records both benign activity (normal behavior) and, at most, one attack.
 - The dataset is diverse, reflecting various types of network traffic and system events.
   
-**Structured Heterogeneity:**
+**Structured Heterogeneity of the dataset:**
 - BETH’s features are highly structured but heterogeneous.
 - This diversity mirrors the complexity of real-world cybersecurity data.
 - Features include network traffic statistics, system logs, and process-level information.
-
-### Property of BETH
-**Scale and realism:**
+- 
+**Scale and realism of the BETH dataset:**
 - BETH is one of the largest publicly available cybersecurity datasets.
 - It captures contemporary host behavior, including modern attacks.
 - Researchers can use BETH to study the impact of scale on anomaly detection algorithms.
