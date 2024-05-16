@@ -25,7 +25,8 @@ Each of this dataset has those features:
  - evil: label (0/1) for evil activity (integer)
 
 ### Training dataset
-
+**Shape:** With 763144 rows, Training subset represents 67% of the data.
+**Process id:**
 
 ### Validation dataset
 
@@ -33,6 +34,7 @@ Each of this dataset has those features:
 
 
 ## Data preparation
+### Numerical data transformation
 ### StackAddresses
 ### Args
 ### Ordinal encoding
