@@ -27,7 +27,8 @@ Each of this dataset has those features:
 ### Training dataset
 **Shape:** With 763144 rows, Training subset represents 67% of the data.
 **Process id:**
-
+**Suspicious:**
+![Suspicious class distribution](pics/train_suspicious_plot.png "Suspicious")
 ### Validation dataset
 
 ### Testing dataset
