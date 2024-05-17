@@ -55,9 +55,28 @@ Each of this dataset has those features:
 
 ### Training dataset
 **Shape:** With 763144 rows, Training subset represents 67% of the data.
+**timestamp**
 **Process id:**
+**ThreadId**
+**Parent Process Id**
+**User Id**
+![userid class distribution](pics/train_userid_plot.png "User ID")
+**Mount Name space**
+![MountNameSpace distribution](pics/train_mountnamespace_plot.png "Mount name space")
+**Process Name**
+**Host Name**
+![HostName distribution](pics/train_hostname_plot.png "Host name")
+**Events**
+![EventId distribution](pics/train_eventid_plot.png "Event id")
+![EventName distribution](pics/train_eventname_plot.png "Event name")
+**Stack Addresses**
+
+**ArgsNum**
+**ReturnValue**
+**Args**
 **Suspicious:**
 ![Suspicious class distribution](pics/train_suspicious_plot.png "Suspicious")
+**Evil**
 ### Validation dataset
 
 ### Testing dataset
