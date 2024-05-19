@@ -41,47 +41,24 @@ Each of this dataset has those features:
  - threadId: id of the thread (integer)
  - parentProcessId: paren process id (integer)
  - userId: login integer id (integer)
+ ![userid class distribution](pics/train_userid_plot.png "User ID")
  - mountNamespace: Set mounting restrictions this process log (integer)
+ ![MountNameSpace distribution](pics/train_mountnamespace_plot.png "Mount name space")
  - processName: command executed (string)
  - hostName: host server (string)
+ ![HostName distribution](pics/train_hostname_plot.png "Host name")
  - eventId: id of the event generating this log (integer)
  - eventName: name of the event (string)
+ ![EventId distribution](pics/train_eventid_plot.png "Event id")
+ ![EventName distribution](pics/train_eventname_plot.png "Event name")
  - stackAddresses: memory values relevant to the process (list of integer)
  - argsNum: number of arguments (integer)
  - returnValue: value returned from this event log (integer)
  - args: arguments passed to this process (list of dictionaries)
  - sus: label (0/1) for suspicious activity (integer)
+  - Training
+  ![Suspicious class distribution](pics/train_suspicious_plot.png "Suspicious")
  - evil: label (0/1) for evil activity (integer)
-
-### Training dataset
-**Shape:** With 763144 rows, Training subset represents 67% of the data.
-**timestamp**
-**Process id:**
-**ThreadId**
-**Parent Process Id**
-**User Id**
-![userid class distribution](pics/train_userid_plot.png "User ID")
-**Mount Name space**
-![MountNameSpace distribution](pics/train_mountnamespace_plot.png "Mount name space")
-**Process Name**
-**Host Name**
-![HostName distribution](pics/train_hostname_plot.png "Host name")
-**Events**
-![EventId distribution](pics/train_eventid_plot.png "Event id")
-![EventName distribution](pics/train_eventname_plot.png "Event name")
-**Stack Addresses**
-
-**ArgsNum**
-**ReturnValue**
-**Args**
-**Suspicious:**
-![Suspicious class distribution](pics/train_suspicious_plot.png "Suspicious")
-**Evil**
-### Validation dataset
-
-### Testing dataset
-
-
 ## Data preparation
 ### Numerical data transformation
 ### StackAddresses
