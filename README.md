@@ -38,7 +38,8 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 Each of this dataset has those features:
  - timestamp: time in seconds since system  boot (float)
  - processId: id of the process spawning this log (integer)
- <div style="text-align:center"><img src="pics/train_processid_plot.png" /></div>
+ <div style="text-align:center"><img src="pics/train_processid_plot.png"></div>
+ 
  - threadId: id of the thread (integer)
  ![ThreadId distribution](pics/train_threadid_plot.png "Thread ID")
  - parentProcessId: paren process id (integer)
