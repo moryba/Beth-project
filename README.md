@@ -69,7 +69,16 @@ Each of this dataset has those features:
   - Training
   <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
 
+  - Validation
+  <div style="text-align:center"><img src="pics/valid_suspicious_plot.png"></div>
+
+  - Testing
+  <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
+
  - evil: label (0/1) for evil activity (integer)
+  - Training
+  - Validation
+  - Testing
 ## Data preparation
 ### Numerical data transformation
 ### StackAddresses
