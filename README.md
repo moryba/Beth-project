@@ -117,6 +117,8 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
 
 With the concept of matrix profile, we tried to find conserved behaviours in the data. In fact, a comparison between sequences can be done by looking at the euclidean distance between all the points in two subsequences and represent the distances in a matrix profile.
 
+![Alt Text](pics/pairwise_euclidean_distance.gif)
+
 ### Event Frequency 
 
 The following chart shows the all enrite frequency of suspicius and not suspicius event
