@@ -113,7 +113,13 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
 |RNN model + embeddings. |  0.95  |     0.82    |   0.97   |   0.97   |
 |Transformer             |  0.95  |     0.82    |   0.97   |   0.97   |
 
-### Application of the Matrix Profile
+## Application of the Matrix Profile
 
 With the concept of matrix profile, we tried to find conserved behaviours in the data. In fact, a comparison between sequences can be done by looking at the euclidean distance between all the points in two subsequences and represent the distances in a matrix profile.
-The
+
+### Event Frequency 
+
+The following chart shows the all enrite frequency of suspicius and not suspicius event
+
+<div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
+
