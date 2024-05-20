@@ -109,6 +109,6 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
 |Dense model + embeddings|  0.91  |     0.75    |   0.95   |   0.95   |
 |CNN model               |  0.11  |     0.53    |   0.51   |   0.51   |
 |CNN model + embeddings  |  0.95  |     0.82    |   0.97   |   0.97   |
-|RNN model               |  0.09  |     0.07    |   0.50   |   0.50   |
+|RNN model               |  0.09  |     0.05    |   0.50   |   0.50   |
 |RNN model + embeddings. |  0.95  |     0.82    |   0.97   |   0.97   |
 |Transformer             |  0.95  |     0.82    |   0.97   |   0.97   |
