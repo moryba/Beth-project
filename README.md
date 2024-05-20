@@ -81,11 +81,31 @@ Each of this dataset has those features:
   - Testing
 ## Data preparation
 ### Numerical data transformation
+As adviced by the authors of the beth dataset's paper, we applied these transformation:
+ - ProcessId and ParentprocessId: 0 if it is [0,1,2] otherwise 1
+ - UserId: 0 if id is less than 1000 otherwise 1
+ - MountNameSpace: 0 if it is equal to 4026531840 otherwise 1
+ - ReturnValue: 0 if it is 0, 1 if it is positif and 2 if it is negatif
+
 ### StackAddresses
+Stackaddresses if a list of numerics.
 ### Args
+Args column contains dictionaries.
 ### Ordinal encoding
+Ordinal encoding is a technique for converting categorical data, where variables have distinct labels or categories, into numerical form suitable for machine learning algorithms. It assigns a unique integer value to each category based on its order or rank.
+As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.
 ### Scaling
+Numerical features are scaled to similar range as they have different scales.
+Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
 ### Smote:
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
+
+## Results
+| Model     |Accuracy|ROC score |
+| :-------: | :----: | :------: |
+|Dense model|        |          |
+|CNN model  |        |          |
+|RNN model. |        |          |
+|Transformer| 0.95   |   0.97.  |
