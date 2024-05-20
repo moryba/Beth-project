@@ -103,12 +103,12 @@ To balance that, we tried to use Smote library combined as it is adviced with ra
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
 
 ## Results
-| Model                  |Accuracy|ROC score |
-| :-------:              | :----: | :------: |
-|Dense model             | 0.09   |   0.50   |
-|Dense model + embeddings|    |      |
-|CNN model               |        |          |
-|CNN model + embeddings  |    |      |
-|RNN model               |        |          |
-|RNN model + embeddings. |        |          |
-|Transformer             | 0.95   |   0.97   |
+| Model                  |Accuracy|Precision avg|Recall avg|ROC score |
+| :-------:              | :----: | :---------: | :------: | :------: |
+|Dense model             |  0.09  |     0.05    |   0.50   |   0.50   |
+|Dense model + embeddings|  0.91  |     0.75    |   0.95   |   0.95   |
+|CNN model               |  0.11  |     0.53    |   0.51   |   0.51   |
+|CNN model + embeddings  |  0.95  |     0.82    |   0.97   |   0.97   |
+|RNN model               |  0.09  |     0.07    |   0.50   |   0.50   |
+|RNN model + embeddings. |  0.95  |     0.82    |   0.97   |   0.97   |
+|Transformer             |  0.95  |     0.82    |   0.97   |   0.97   |
