@@ -119,6 +119,8 @@ With the concept of matrix profile, we tried to find conserved behaviours in the
 
 ![Alt Text](pics/pairwise_euclidean_distance.gif)
 
+<div style="text-align:center"><img src="pics/Screenshot 2024-05-20 165934.png"></div>
+
 ### Event Frequency 
 
 The following chart shows the all enrite frequency of suspicius and not suspicius event
