@@ -123,7 +123,7 @@ With the concept of matrix profile, we tried to find conserved behaviours in the
 
 ### Event Frequency 
 
-The following chart shows the all enrite frequency of suspicius and not suspicius event
+The following chart shows the entire frequency of suspicius and not suspicius event
 
 <div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
 
