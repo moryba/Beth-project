@@ -88,9 +88,13 @@ As adviced by the authors of the beth dataset's paper, we applied these transfor
  - ReturnValue: 0 if it is 0, 1 if it is positif and 2 if it is negatif
 
 ### StackAddresses
-Stackaddresses if a list of numerics.
+Stackaddresses sf a list of numerics with a maximum of 20 elements.
+We created 20 new columns named "stack_1", "stack_2", etc. in each dataset, and assigns each element from the list to its respective new column.
+
 ### Args
-Args column contains dictionaries.
+Args column contains a list of maximum 5 dictionaries, each disctionary contains three elements ({'name': 'dev', 'type': 'dev_t', 'value': 211812353}).
+We created 15 new columns in each datset, and assigns each element from the dictionaries to its respective new column.
+
 ### Ordinal encoding
 Ordinal encoding is a technique for converting categorical data, where variables have distinct labels or categories, into numerical form suitable for machine learning algorithms. It assigns a unique integer value to each category based on its order or rank.
 As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.
@@ -101,6 +105,22 @@ Since we used ordinal encoding for categorical features, scaling is not necessar
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
+
+## Models
+### Dense neural network
+#### Weights initializer
+#### Kernel initializer
+#### Activation functions
+#### Optimizer
+### Convolutional neural network
+### Recursive neural network
+### Transformer
+ - **Training**:
+<div style="text-align:center"><img src="pics/Transformer_training.png"></div>
+
+ - **Confusion matrix**:
+<div style="text-align:center"><img src="pics/Transformer_confusionmatrix.png"></div>
+<div style="text-align:center"><img src="pics/Transformer_roc.png"></div>
 
 ## Results
 | Model                  |Accuracy|Precision avg|Recall avg|ROC score |
