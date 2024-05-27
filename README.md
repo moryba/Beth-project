@@ -101,6 +101,9 @@ As our approch is for an unsupervised model, we used ordinal encoder to handle n
 ### Scaling
 Numerical features are scaled to similar range as they have different scales.
 Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
+Another advantage of scaling is that it significantly reduces the training time and allows the model to converge better and quicker.
+
+
 ### Smote:
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
@@ -121,6 +124,15 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
  - **Confusion matrix**:
 <div style="text-align:center"><img src="pics/Transformer_confusionmatrix.png"></div>
 <div style="text-align:center"><img src="pics/Transformer_roc.png"></div>
+
+ - Strengths:
+  - The model has high accuracy (94.6%).
+  - Perfect precision and specificity, meaning there are no false positives.
+  - High recall (94.1%) and a strong F1 score (97%).
+
+ - Weaknesses:
+  - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
+  - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
 
 ## Results
 | Model                  |Accuracy|Precision avg|Recall avg|ROC score |
