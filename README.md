@@ -171,3 +171,17 @@ So the shapelet discovery can use the matrix profile as a tool for efficiently c
 
 <div style="text-align:center"><img src="pics/Sus_NotSus.png"></div>
 
+### LSTM with the shaplet discovery method
+
+<div style="text-align:center"><img src="pics/params_LSTM.png"></div>
+
+<div style="text-align:center"><img src="pics/LSTM.png"></div>
+
+### Dense Model with the shapelet discovery method
+
+<div style="text-align:center"><img src="pics/params_Dense.png"></div>
+
+<div style="text-align:center"><img src="pics/Dense_Model.png"></div>
+
+
+
