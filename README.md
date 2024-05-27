@@ -62,6 +62,8 @@ Each of this dataset has those features:
  <div style="text-align:center"><img src="pics/train_eventname_plot.png"></div>
 
  - stackAddresses: memory values relevant to the process (list of integer)
+ <div style="text-align:center"><img src="pics/train_stackaddresses-length_plot.png"></div>
+ <div style="text-align:center"><img src="pics/train_stackaddresses_plot.png"></div>
  - argsNum: number of arguments (integer)
  - returnValue: value returned from this event log (integer)
  - args: arguments passed to this process (list of dictionaries)
