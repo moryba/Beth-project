@@ -75,6 +75,7 @@ Each of this dataset has those features:
  - args: arguments passed to this process (list of dictionaries)
 
  - sus: label (0/1) for suspicious activity (integer)
+ We'll try to create a model that could classify the suspicious activities.
 
     - Training
     <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
@@ -118,9 +119,6 @@ As our approch is for an unsupervised model, we used ordinal encoder to handle n
 ### Scaling
 Numerical features are scaled to similar range as they have different scales.
 Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
-Another advantage of scaling is that it significantly reduces the training time and allows the model to converge better and quicker.
-
-
 ### Smote:
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
