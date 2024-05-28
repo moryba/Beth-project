@@ -98,7 +98,7 @@ Each of this dataset has those features:
     - Testing
     <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
 
-**Correlation matrix**
+### Correlation matrix
 <div style="text-align:center"><img src="pics/Correlation matrix.png"></div>
 
  - Strong Positive Correlations:
