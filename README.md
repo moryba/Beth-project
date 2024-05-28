@@ -86,7 +86,7 @@ Each of this dataset has those features:
   <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
 
  - evil: label (0/1) for evil activity (integer)
- 
+
   - Training
   <div style="text-align:center"><img src="pics/Evil_training.png"></div>
  
