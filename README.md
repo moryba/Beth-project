@@ -76,25 +76,25 @@ Each of this dataset has those features:
 
  - sus: label (0/1) for suspicious activity (integer)
 
-  - Training
-  <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
+    - Training
+    <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
 
-  - Validation
-  <div style="text-align:center"><img src="pics/valid_suspicious_plot.png"></div>
+    - Validation
+    <div style="text-align:center"><img src="pics/valid_suspicious_plot.png"></div>
 
-  - Testing
-  <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
+    - Testing
+    <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
 
  - evil: label (0/1) for evil activity (integer)
 
-  - Training
-  <div style="text-align:center"><img src="pics/Evil_training.png"></div>
+    - Training
+    <div style="text-align:center"><img src="pics/Evil_training.png"></div>
  
-  - Validation
-  <div style="text-align:center"><img src="pics/Evil_validation.png"></div>
+    - Validation
+    <div style="text-align:center"><img src="pics/Evil_validation.png"></div>
  
-  - Testing
-  <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
+    - Testing
+    <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
  
 ## Data preparation
 ### Numerical data transformation
