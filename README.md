@@ -37,7 +37,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 ### Features
 Each of this dataset has those features:
  - timestamp: time in seconds since system  boot (float)
- 
+
  - processId: id of the process spawning this log (integer)
  <div style="text-align:center"><img src="pics/train_processid_plot.png"></div>
 
@@ -65,7 +65,7 @@ Each of this dataset has those features:
  <div style="text-align:center"><img src="pics/train_eventname_plot.png"></div>
 
  - stackAddresses: memory values relevant to the process (list of integer)
- <div style="text-align:center"><img src="pics/train_stackaddresses-length_plot.png"></div>
+ <div style="text-align:center"><img src="pics/train_stackaddresses-length_plot2.png"></div>
  <div style="text-align:center"><img src="pics/train_stackaddresses_plot.png"></div>
 
  - argsNum: number of arguments (integer)
