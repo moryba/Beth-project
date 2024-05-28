@@ -101,6 +101,32 @@ Each of this dataset has those features:
 **Correlation matrix**
 <div style="text-align:center"><img src="pics/Correlation matrix.png"></div>
 
+ - Strong Positive Correlations:
+    - processId and threadId: They have a correlation of 1.00, indicating they are perfectly correlated. This makes sense as threadId is often associated with processId.
+    - parentProcessId and userId: With a correlation of 0.55, it suggests a moderate positive relationship. Likely because parent processes are tied to user accounts.
+    - sus and userId: This has a high correlation of 0.77, suggesting that suspicious activity (sus) is strongly linked with specific user IDs.
+    - evil and userId: This shows a very strong positive correlation of 0.90, indicating that 'evil' actions are highly associated with certain user IDs.
+    - sus and evil: With a correlation of 0.73, it indicates that actions labeled as suspicious are strongly correlated with those labeled as evil.
+
+ - Moderate Positive Correlations:
+    - timestamp and userId: A correlation of 0.68 suggests that timestamps are moderately positively related to user IDs, possibly indicating certain users are more active at certain times.
+    - parentProcessId and timestamp: With 0.67, it shows a moderate positive relationship.
+    - sus and parentProcessId: This correlation is 0.69, indicating that suspicious activities are moderately correlated with parent processes.
+    - evil and parentProcessId: Correlation of 0.72, indicating a strong association between evil actions and parent processes.
+
+ - Negative Correlations:
+    - mountNamespace with processId, threadId, parentProcessId: These are moderately negatively correlated (around -0.26), indicating that certain process/thread IDs and their parent processes are less likely to have specific mountNamespace values.
+    - eventId with timestamp, userId, sus, evil: Negative correlations, especially -0.36 with timestamp and -0.39 with userId, suggest that certain events are less likely to happen at certain times or for certain users.
+    - eventId with sus and evil: Both are negatively correlated (around -0.35 to -0.38), indicating that particular events are less associated with suspicious and evil activities.
+
+ - Low/No Correlation:
+    - argsNum and other variables: Mostly low correlations, suggesting that the number of arguments has little to no linear relationship with the other features.
+    - returnValue and other variables: Low correlations overall, indicating the return value of processes is largely independent of other features.
+
+ - Interpreting Specific Pairs:
+    - timestamp and sus/evil: These have correlations of 0.62 and 0.70, respectively. This suggests that the timing of events is significantly associated with suspicious and evil activities.
+    - mountNamespace: Shows mostly weak correlations with other features, suggesting that mountNamespace values are relatively independent of other variables.
+
 ## Data preparation
 ### Numerical data transformation
 As adviced by the authors of the beth dataset's paper, we applied these transformation:
