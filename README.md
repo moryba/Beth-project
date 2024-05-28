@@ -79,8 +79,14 @@ Each of this dataset has those features:
 
  - evil: label (0/1) for evil activity (integer)
   - Training
+  <div style="text-align:center"><img src="pics/Evil_training.png"></div>
+ 
   - Validation
+  <div style="text-align:center"><img src="pics/Evil_validation.png"></div>
+ 
   - Testing
+  <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
+ 
 ## Data preparation
 ### Numerical data transformation
 As adviced by the authors of the beth dataset's paper, we applied these transformation:
