@@ -75,6 +75,7 @@ Each of this dataset has those features:
  - args: arguments passed to this process (list of dictionaries)
 
  - sus: label (0/1) for suspicious activity (integer)
+
   - Training
   <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
 
@@ -85,6 +86,7 @@ Each of this dataset has those features:
   <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
 
  - evil: label (0/1) for evil activity (integer)
+ 
   - Training
   <div style="text-align:center"><img src="pics/Evil_training.png"></div>
  
