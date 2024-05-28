@@ -37,6 +37,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 ### Features
 Each of this dataset has those features:
  - timestamp: time in seconds since system  boot (float)
+ 
  - processId: id of the process spawning this log (integer)
  <div style="text-align:center"><img src="pics/train_processid_plot.png"></div>
 
@@ -53,10 +54,12 @@ Each of this dataset has those features:
  <div style="text-align:center"><img src="pics/train_mountnamespace_plot.png"></div>
 
  - processName: command executed (string)
+
  - hostName: host server (string)
  <div style="text-align:center"><img src="pics/train_hostname_plot.png"></div>
 
  - eventId: id of the event generating this log (integer)
+
  - eventName: name of the event (string)
  <div style="text-align:center"><img src="pics/train_eventid_plot.png"></div>
  <div style="text-align:center"><img src="pics/train_eventname_plot.png"></div>
@@ -64,9 +67,13 @@ Each of this dataset has those features:
  - stackAddresses: memory values relevant to the process (list of integer)
  <div style="text-align:center"><img src="pics/train_stackaddresses-length_plot.png"></div>
  <div style="text-align:center"><img src="pics/train_stackaddresses_plot.png"></div>
+
  - argsNum: number of arguments (integer)
+
  - returnValue: value returned from this event log (integer)
+
  - args: arguments passed to this process (list of dictionaries)
+
  - sus: label (0/1) for suspicious activity (integer)
   - Training
   <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
