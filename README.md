@@ -42,6 +42,7 @@ Each of this dataset has those features:
  <div style="text-align:center"><img src="pics/train_processid_plot.png"></div>
 
  - threadId: id of the thread (integer)
+ there is a total of 545 thread ids.
  <div style="text-align:center"><img src="pics/train_threadid_plot.png"></div>
 
  - parentProcessId: paren process id (integer)
@@ -96,7 +97,10 @@ Each of this dataset has those features:
  
     - Testing
     <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
- 
+
+**Correlation matrix**
+<div style="text-align:center"><img src="pics/Correlation matrix.png"></div>
+
 ## Data preparation
 ### Numerical data transformation
 As adviced by the authors of the beth dataset's paper, we applied these transformation:
