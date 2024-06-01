@@ -156,13 +156,16 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
 
 ## Models
 ### Dense neural network
-#### Weights initializer
-#### Kernel initializer
-#### Activation functions
-#### Optimizer
+The model processes both categorical and numerical input features. Categorical features are passed through embedding layers, reshaped, and then concatenated with numerical features before being fed into dense layers with ReLU activation and dropout for regularization.
+ - **Training**:
+ <div style="text-align:center"><img src="pics/Dense_training.png"></div>
+
 ### Convolutional neural network
 ### Recursive neural network
 ### Transformer
+#### Positional encoding:
+The positional encoding gives information about the position of elements within a sequence to the input embeddings. This technique is crucial in the Transformer architecture, as it enables the model to understand the order of the sequence, which is otherwise lost in the absence of recurrence or convolution.
+In our model, we used sinusoidal positional encoding.
  - **Training**:
 <div style="text-align:center"><img src="pics/Transformer_training.png"></div>
 
@@ -178,6 +181,12 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
  - Weaknesses:
   - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
   - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
+
+### Embeddings layer
+#### Weights initializer
+#### Kernel initializer
+### Activation functions
+### Optimizer
 
 ## Results
 | Model                  |Accuracy|Precision avg|Recall avg|ROC score |
@@ -228,5 +237,10 @@ So the shapelet discovery can use the matrix profile as a tool for efficiently c
 
 <div style="text-align:center"><img src="pics/Dense_Model.png"></div>
 
-
-
+## References
+1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
+Kate Highnam, Kai Arulkumaran, Zachary Hanif, Nicholas R. Jennings 
+[https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf](https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf)
+2. Smote: Synthetic Minority Over-sampling Technique
+Authors: Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmeyer
+[https://arxiv.org/pdf/1106.1813](https://arxiv.org/pdf/1106.1813)
