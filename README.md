@@ -160,6 +160,13 @@ The model processes both categorical and numerical input features. Categorical f
  - **Training**:
  <div style="text-align:center"><img src="pics/Dense_training.png"></div>
 
+ - **Training using Smote**
+ <div style="text-align:center"><img src="pics/DNN_Smote_training.png"></div>
+
+ - **Training using embedding layers**
+ <div style="text-align:center"><img src="pics/Dense_Embeddings_training.png"></div>
+
+
 ### Convolutional neural network
 ### Recursive neural network
 ### Transformer
