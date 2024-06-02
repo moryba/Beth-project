@@ -1,7 +1,7 @@
 # Beth-project
 
 ## Introduction 
-The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models. 
+The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models [1].
 
  The scale, diversity, and structured heterogeneity of BETH dataset makes it an invaluable resource for advancing anomaly detection techniques and enhancing the robustness of machine learning models in the cybersecurity domain.
 
@@ -157,6 +157,10 @@ SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new ins
 ## Models
 ### Dense neural network
 The model processes both categorical and numerical input features. Categorical features are passed through embedding layers, reshaped, and then concatenated with numerical features before being fed into dense layers with ReLU activation and dropout for regularization.
+
+ - **Structure**:
+ <div style="text-align:center"><img src="pics/Dense model.png"></div>
+
  - **Training**:
  <div style="text-align:center"><img src="pics/Dense_training.png"></div>
 
@@ -165,7 +169,6 @@ The model processes both categorical and numerical input features. Categorical f
 
  - **Training using embedding layers**
  <div style="text-align:center"><img src="pics/Dense_Embeddings_training.png"></div>
-
 
 ### Convolutional neural network
 ### Recursive neural network
