@@ -39,35 +39,35 @@ Each of this dataset has those features:
  - timestamp: time in seconds since system  boot (float)
 
  - processId: id of the process spawning this log (integer)
- <div style="text-align:center"><img src="pics/train_processid_plot.png"></div>
+ <p align="center"><img src="pics/train_processid_plot.png"></p>
 
  - threadId: id of the thread (integer)
  there is a total of 545 thread ids.
- <div style="text-align:center"><img src="pics/train_threadid_plot.png"></div>
+ <p align="center"><img src="pics/train_threadid_plot.png"></p>
 
  - parentProcessId: parent process id (integer)
- <div style="text-align:center"><img src="pics/train_parentprocessid_plot.png"></div>
+ <p align="center"><img src="pics/train_parentprocessid_plot.png"></p>
 
  - userId: login integer id (integer)
- <div style="text-align:center"><img src="pics/train_userid_plot.png"></div>
+ <p align="center"><img src="pics/train_userid_plot.png"></p>
 
  - mountNamespace: Set mounting restrictions this process log (integer)
- <div style="text-align:center"><img src="pics/train_mountnamespace_plot.png"></div>
+ <p align="center"><img src="pics/train_mountnamespace_plot.png"></p>
 
  - processName: command executed (string)
 
  - hostName: host server (string)
- <div style="text-align:center"><img src="pics/train_hostname_plot.png"></div>
+ <p align="center"><img src="pics/train_hostname_plot.png"></p>
 
  - eventId: id of the event generating this log (integer)
 
  - eventName: name of the event (string)
- <div style="text-align:center"><img src="pics/train_eventid_plot.png"></div>
- <div style="text-align:center"><img src="pics/train_eventname_plot.png"></div>
+ <p align="center"><img src="pics/train_eventid_plot.png"></p>
+ <p align="center"><img src="pics/train_eventname_plot.png"></p>
 
  - stackAddresses: memory values relevant to the process (list of integer)
- <div style="text-align:center"><img src="pics/train_stackaddresses-length_plot2.png"></div>
- <div style="text-align:center"><img src="pics/train_stackaddresses_plot.png"></div>
+ <p align="center"><img src="pics/train_stackaddresses-length_plot2.png"></p>
+ <p align="center"><img src="pics/train_stackaddresses_plot.png"></p>
 
  - argsNum: number of arguments (integer)
 
@@ -79,27 +79,27 @@ Each of this dataset has those features:
  We'll try to create a model that could classify the suspicious activities.
 
     - Training
-    <div style="text-align:center"><img src="pics/train_suspicious_plot.png"></div>
+    <p align="center"><img src="pics/train_suspicious_plot.png"></p>
 
     - Validation
-    <div style="text-align:center"><img src="pics/valid_suspicious_plot.png"></div>
+    <p align="center"><img src="pics/valid_suspicious_plot.png"></p>
 
     - Testing
-    <div style="text-align:center"><img src="pics/test_suspicious_plot.png"></div>
+    <p align="center"><img src="pics/test_suspicious_plot.png"></p>
 
  - evil: label (0/1) for evil activity (integer)
 
     - Training
-    <div style="text-align:center"><img src="pics/Evil_training.png"></div>
+    <p align="center"><img src="pics/Evil_training.png"></p>
  
     - Validation
-    <div style="text-align:center"><img src="pics/Evil_validation.png"></div>
+    <p align="center"><img src="pics/Evil_validation.png"></p>
  
     - Testing
-    <div style="text-align:center"><img src="pics/Evil_testing.png"></div>
+    <p align="center"><img src="pics/Evil_testing.png"></p>
 
 ### Correlation matrix
-<div style="text-align:center"><img src="pics/Correlation matrix.png"></div>
+<p align="center"><img src="pics/Correlation matrix.png"></p>
 
  - Strong Positive Correlations:
     - processId and threadId: They have a correlation of 1.00, indicating they are perfectly correlated. This makes sense as threadId is often associated with processId.
@@ -129,7 +129,7 @@ Each of this dataset has those features:
 
 ### Event Frequency 
 The following chart shows the entire frequency of suspicius and not suspicius event:
-<div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
+<p align="center"><img src="pics/frequency_sus&notsus.png"></p>
 
  - Event Frequency: The y-axis represents the frequency of events, ranging from 0 to over 7000.
 
@@ -175,7 +175,7 @@ The similarity or distance between each subsequence and the rest of the data is 
 So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
 
 The following chart describe how the comparison with the suspicious activity differs to the comparison with the not suspicious activity.
-<div style="text-align:center"><img src="pics/Sus_NotSus.png"></div>
+<p align="center"><img src="pics/Sus_NotSus.png"></p>
 
 ## Models
 ### Dense neural network
@@ -187,44 +187,44 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
  <p align="center"><img src="pics/Dense-model1-structure.png" height='600' width='200'></p>
 
  - **Training**:
- <div style="text-align:center"><img src="pics/Dense_training.png"></div>
+ <p align="center"><img src="pics/Dense_training.png"></p>
 
 #### Model 2:
  - **Structure**:
- <div style="text-align:center"><img src="pics/Dense-model2-structure.png"></div>
+ <p align="center"><img src="pics/Dense-model2-structure.png"></p>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Dense2_training.png" height='500'></div>
+ <p align="center"><img src="pics/Dense2_training.png" height='500'></p>
 
 #### Model 3:
  - **Structure**:
- <div style="text-align:center"><img src="pics/Dense-smote-structure.png" height='500'></div>
+ <p align="center"><img src="pics/Dense-smote-structure.png" height='500'></p>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Dense_smote_training.png"></div>
+ <p align="center"><img src="pics/Dense_smote_training.png"></p>
 
 #### Model4:
  - **Structure**:
- <div style="text-align:center"><img src="pics/params_Dense.png"></div>
+ <p align="center"><img src="pics/params_Dense.png"></p>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Dense_Model.png"></div>
+ <p align="center"><img src="pics/Dense_Model.png"></p>
 
 
 ### Convolutional neural network
 #### Model 1
  - **Structure**
- <div style="text-align:center"><img src="pics/Conv-model1-structure.png"></div>
+ <p align="center"><img src="pics/Conv-model1-structure.png"></p>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Conv-model1-training.png"></div>
+ <p align="center"><img src="pics/Conv-model1-training.png"></p>
 
 #### Model 2
  - **Structure**
- <div style="text-align:center"><img src="pics/Conv-model2-structure.png"></div>
+ <p align="center"><img src="pics/Conv-model2-structure.png"></p>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Conv-model2-training.png"></div>
+ <p align="center"><img src="pics/Conv-model2-training.png"></p>
 
 ### LSTM neural network
 #### Model 1 (no embeddings)
@@ -236,11 +236,11 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 The positional encoding gives information about the position of elements within a sequence to the input embeddings. This technique is crucial in the Transformer architecture, as it enables the model to understand the order of the sequence, which is otherwise lost in the absence of recurrence or convolution.
 In our model, we used sinusoidal positional encoding.
  - **Training**:
-<div style="text-align:center"><img src="pics/Transformer_training.png"></div>
+<p align="center"><img src="pics/Transformer_training.png"></p>
 
  - **Confusion matrix**:
-<div style="text-align:center"><img src="pics/Transformer_confusionmatrix.png"></div>
-<div style="text-align:center"><img src="pics/Transformer_roc.png"></div>
+<p align="center"><img src="pics/Transformer_confusionmatrix.png"></p>
+<p align="center"><img src="pics/Transformer_roc.png"></p>
 
  - Strengths:
   - The model has high accuracy (94.6%).
@@ -274,13 +274,13 @@ With the concept of matrix profile, we tried to find conserved behaviours in the
 
 ![Alt Text](pics/pairwise_euclidean_distance.gif)
 
-<div style="text-align:center"><img src="pics/Screenshot 2024-05-20 165934.png"></div>
+<p align="center"><img src="pics/Screenshot 2024-05-20 165934.png"></p>
 
 ### Event Frequency 
 
 The following chart shows the entire frequency of suspicius and not suspicius event
 
-<div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
+<p align="center"><img src="pics/frequency_sus&notsus.png"></p>
 
 ### Shapelet Discovery 
 
@@ -292,19 +292,19 @@ So the shapelet discovery can use the matrix profile as a tool for efficiently c
 
 ### How the comparison with the suspicious activity differs to the comparison with the not suspicious activity
 
-<div style="text-align:center"><img src="pics/Sus_NotSus.png"></div>
+<p align="center"><img src="pics/Sus_NotSus.png"></p>
 
 ### LSTM with the shaplet discovery method
 
-<div style="text-align:center"><img src="pics/params_LSTM.png"></div>
+<p align="center"><img src="pics/params_LSTM.png"></p>
 
-<div style="text-align:center"><img src="pics/LSTM.png"></div>
+<p align="center"><img src="pics/LSTM.png"></p>
 
 ### Dense Model with the shapelet discovery method
 
-<div style="text-align:center"><img src="pics/params_Dense.png"></div>
+<p align="center"><img src="pics/params_Dense.png"></p>
 
-<div style="text-align:center"><img src="pics/Dense_Model.png"></div>
+<p align="center"><img src="pics/Dense_Model.png"></p>
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
