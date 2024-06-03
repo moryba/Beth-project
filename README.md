@@ -198,9 +198,10 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 
 #### Model 3:
  - **Structure**:
+ <div style="text-align:center"><img src="pics/Dense-smote-structure.png"></div>
 
  - **Training**
- <div style="text-align:center"><img src="pics/Dense_Embeddings_training.png"></div>
+ <div style="text-align:center"><img src="pics/Dense_smote_training.png"></div>
 
 #### Model4:
  - **Structure**:
