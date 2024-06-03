@@ -212,7 +212,7 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 ### Convolutional neural network
 #### Model 1
  - **Structure**
- <div style="text-align:center"><img src="pics/Conv model1-structure.png"></div>
+ <div style="text-align:center"><img src="pics/Conv-model1-structure.png"></div>
 
  - **Training**
  <div style="text-align:center"><img src="pics/Conv-model1-training.png"></div>
