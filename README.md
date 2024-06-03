@@ -173,7 +173,9 @@ The process of shapelet discovery involves searching through the time series dat
 The similarity or distance between each subsequence and the rest of the data is computed to determine its discriminative power. The shapelets with the highest discriminative power are selected as representative patterns.
 
 So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
+The following chart describe how the comparison with the suspicious activity differs to the comparison with the not suspicious activity.
 <div style="text-align:center"><img src="pics/Sus_NotSus.png"></div>
+
 ## Models
 ### Dense neural network
 The model processes both categorical and numerical input features. Categorical features are passed through embedding layers, reshaped, and then concatenated with numerical features before being fed into dense layers with ReLU activation and dropout for regularization.
