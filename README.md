@@ -181,6 +181,9 @@ The following chart describe how the comparison with the suspicious activity dif
 ### Dense neural network
 The model processes both categorical and numerical input features. Categorical features are passed through embedding layers, reshaped, and then concatenated with numerical features before being fed into dense layers with ReLU activation and dropout for regularization.
 
+#### Model1:
+This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
+Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias
  - **Structure**:
  <div style="text-align:center"><img src="pics/Dense model.png"></div>
 
