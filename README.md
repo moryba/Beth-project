@@ -128,8 +128,14 @@ Each of this dataset has those features:
     - mountNamespace: Shows mostly weak correlations with other features, suggesting that mountNamespace values are relatively independent of other variables.
 
 ### Event Frequency 
-The following chart shows the entire frequency of suspicius and not suspicius event
+The following chart shows the entire frequency of suspicius and not suspicius event:
 <div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
+ - Event Frequency: The y-axis represents the frequency of events, ranging from 0 to over 7000.
+ - Timestamp: The x-axis represents the timestamps when the events occurred.
+ - Not Suspicious Events: Represented by blue lines. The frequency of these events is higher and more variable, with several spikes reaching high values, particularly towards the left side of the chart.
+ - Suspicious Events: Represented by red lines. These events are less frequent and usually have lower values compared to the "Not Suspicious" events. There are a few noticeable spikes in the red lines, indicating higher frequencies of suspicious events at certain timestamps.
+
+Overall, the chart shows that "Not Suspicious" events occur more frequently and with higher peaks compared to "Suspicious" events, which occur less often and with lower peaks.
 
 ## Data preparation
 ### Numerical data transformation
