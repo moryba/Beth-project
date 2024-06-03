@@ -45,7 +45,7 @@ Each of this dataset has those features:
  there is a total of 545 thread ids.
  <div style="text-align:center"><img src="pics/train_threadid_plot.png"></div>
 
- - parentProcessId: paren process id (integer)
+ - parentProcessId: parent process id (integer)
  <div style="text-align:center"><img src="pics/train_parentprocessid_plot.png"></div>
 
  - userId: login integer id (integer)
@@ -126,6 +126,10 @@ Each of this dataset has those features:
  - Interpreting Specific Pairs:
     - timestamp and sus/evil: These have correlations of 0.62 and 0.70, respectively. This suggests that the timing of events is significantly associated with suspicious and evil activities.
     - mountNamespace: Shows mostly weak correlations with other features, suggesting that mountNamespace values are relatively independent of other variables.
+
+### Event Frequency 
+The following chart shows the entire frequency of suspicius and not suspicius event
+<div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
 
 ## Data preparation
 ### Numerical data transformation
