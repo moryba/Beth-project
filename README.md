@@ -191,7 +191,7 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 
 #### Model 2:
  - **Structure**:
- <div style="text-align:center"><img src="pics/Dense-model2-structure.png"></div>
+ <div style="text-align:center, width:0.5, height:0.5"><img src="pics/Dense-model2-structure.png"></div>
 
  - **Training**
  <div style="text-align:center"><img src="pics/Dense2_training.png"></div>
