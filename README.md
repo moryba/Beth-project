@@ -224,7 +224,11 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
  - **Training**
  <div style="text-align:center"><img src="pics/Conv-model2-training.png"></div>
 
-### Recursive neural network
+### LSTM neural network
+#### Model 1 (no embeddings)
+#### Model 2 (with embeddings)
+#### Model 3 (shapelet discovery)
+
 ### Transformer
 #### Positional encoding:
 The positional encoding gives information about the position of elements within a sequence to the input embeddings. This technique is crucial in the Transformer architecture, as it enables the model to understand the order of the sequence, which is otherwise lost in the absence of recurrence or convolution.
