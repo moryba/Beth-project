@@ -130,12 +130,13 @@ Each of this dataset has those features:
 ### Event Frequency 
 The following chart shows the entire frequency of suspicius and not suspicius event:
 <div style="text-align:center"><img src="pics/frequency_sus&notsus.png"></div>
+
  - Event Frequency: The y-axis represents the frequency of events, ranging from 0 to over 7000.
 
  - Timestamp: The x-axis represents the timestamps when the events occurred.
 
  - Not Suspicious Events: Represented by blue lines. The frequency of these events is higher and more variable, with several spikes reaching high values, particularly towards the left side of the chart.
- 
+
  - Suspicious Events: Represented by red lines. These events are less frequent and usually have lower values compared to the "Not Suspicious" events. There are a few noticeable spikes in the red lines, indicating higher frequencies of suspicious events at certain timestamps.
 
 Overall, the chart shows that "Not Suspicious" events occur more frequently and with higher peaks compared to "Suspicious" events, which occur less often and with lower peaks.
@@ -162,11 +163,17 @@ As our approch is for an unsupervised model, we used ordinal encoder to handle n
 ### Scaling
 Numerical features are scaled to similar range as they have different scales.
 Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
-### Smote:
+### Smote
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
+### Shapelet discovery method
+Shapelet discovery is a technique used in time series analysis to identify discriminative subpatterns, known as shapelets, within a set of time series data. Shapelets are subsequences that capture characteristic patterns or behaviors in the data.
+The process of shapelet discovery involves searching through the time series data to find subsequences that are representative of different classes or categories like in our case for **suspicious activities and not suspicious activities**. 
+The similarity or distance between each subsequence and the rest of the data is computed to determine its discriminative power. The shapelets with the highest discriminative power are selected as representative patterns.
 
+So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
+<div style="text-align:center"><img src="pics/Sus_NotSus.png"></div>
 ## Models
 ### Dense neural network
 The model processes both categorical and numerical input features. Categorical features are passed through embedding layers, reshaped, and then concatenated with numerical features before being fed into dense layers with ReLU activation and dropout for regularization.
