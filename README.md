@@ -171,6 +171,20 @@ The model processes both categorical and numerical input features. Categorical f
  <div style="text-align:center"><img src="pics/Dense_Embeddings_training.png"></div>
 
 ### Convolutional neural network
+#### Model 1
+ - **Structure**
+ <div style="text-align:center"><img src="pics/Conv model1-structure.png"></div>
+
+ - **Training**
+ <div style="text-align:center"><img src="pics/Conv-model1-training.png"></div>
+
+#### Model 2
+ - **Structure**
+ <div style="text-align:center"><img src="pics/Conv-model2-structure.png"></div>
+
+ - **Training**
+ <div style="text-align:center"><img src="pics/Conv-model2-training.png"></div>
+
 ### Recursive neural network
 ### Transformer
 #### Positional encoding:
