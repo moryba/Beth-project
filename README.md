@@ -218,7 +218,12 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 ### LSTM neural network
 #### Model 1 (no embeddings)
 #### Model 2 (with embeddings)
-#### Model 3 (shapelet discovery)
+#### Model 3 (shapelet discovery method)
+- **Structure**
+  
+- **Training**
+  
+- **Confusion Matrix**
 
 ### Transformer
 #### Positional encoding:
