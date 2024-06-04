@@ -80,16 +80,9 @@ Each of this dataset has those features:
  We want to develop a model that can accurately classify and identify suspicious activities based on this labeling system.
  <p align="center"><img src="pics/sus_distributions.png"></p>
 
- - evil: label (0/1) for evil activity (integer)
-
-    - Training
-    <p align="center"><img src="pics/Evil_training.png"></p>
- 
-    - Validation
-    <p align="center"><img src="pics/Evil_validation.png"></p>
- 
-    - Testing
-    <p align="center"><img src="pics/Evil_testing.png"></p>
+ - evil: This is an integer label where 0 indicates non-malicious activity and 1 indicates malicious activity.
+ This label was not chosen for classification because the training and validation datasets do not contain any malicious classes.
+ <p align="center"><img src="pics/Evil_plot.png"></p>
 
 ### Correlation matrix
 <p align="center"><img src="pics/Correlation matrix.png"></p>
