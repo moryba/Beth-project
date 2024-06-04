@@ -190,7 +190,7 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
  - **Training**
  <p align="center"><img src="pics/Dense_smote_training.png"></p>
 
-#### Model4:
+#### Model 4: Dense model with the Shapelet Discovery method
  - **Structure**:
  <p align="center"><img src="pics/params_Dense.png"></p>
 
