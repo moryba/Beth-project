@@ -70,6 +70,7 @@ Each of this dataset has those features:
  <p align="center"><img src="pics/train_stackaddresses_plot.png"></p>
 
  - returnValue: value returned from this event log (integer)
+ <p align="center"><img src="pics/ReturnValue_barplot.png"></p>
 
  - argsNum: number of arguments (integer)
  <p align="center"><img src="pics/argsNum_barplot.png"></p>
