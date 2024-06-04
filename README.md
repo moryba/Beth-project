@@ -55,6 +55,7 @@ Each of this dataset has those features:
  <p align="center"><img src="pics/train_mountnamespace_plot.png"></p>
 
  - processName: command executed (string)
+ <p align="center"><img src="pics/train_processname_plot.png"></p>
 
  - hostName: host server (string)
  <p align="center"><img src="pics/train_hostname_plot.png"></p>
