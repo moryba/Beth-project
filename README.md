@@ -69,14 +69,16 @@ Each of this dataset has those features:
  <p align="center"><img src="pics/train_stackaddresses-length_plot2.png"></p>
  <p align="center"><img src="pics/train_stackaddresses_plot.png"></p>
 
- - argsNum: number of arguments (integer)
-
  - returnValue: value returned from this event log (integer)
+
+ - argsNum: number of arguments (integer)
+ <p align="center"><img src="pics/argsNum_barplot.png"></p>
 
  - args: arguments passed to this process (list of dictionaries)
 
  - sus: label (0/1) for suspicious activity (integer)
  We'll try to create a model that could classify the suspicious activities.
+ <p align="center"><img src="pics/sus_distributions.png"></p>
 
     - Training
     <p align="center"><img src="pics/train_suspicious_plot.png"></p>
