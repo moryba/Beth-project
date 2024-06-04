@@ -198,9 +198,8 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
  <p align="center"><img src="pics/Dense_Model.png"></p>
 
  - **Confusion Matrix**
+  <p align="center"><img src="pics/Dense_conf_matrix_shapelet.png"></p> 
    
-
-
 ### Convolutional neural network
 #### Model 1
  - **Structure**
