@@ -220,10 +220,13 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 #### Model 2 (with embeddings)
 #### Model 3 (shapelet discovery method)
 - **Structure**
+<p align="center"><img src="pics/LSTM_params.png"></p>
   
 - **Training**
+<p align="center"><img src="pics/LSTM_accuracy.png"></p>
   
 - **Confusion Matrix**
+<p align="center"><img src="pics/confusion_LSTM.png"></p>
 
 ### Transformer
 #### Positional encoding:
