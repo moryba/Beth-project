@@ -300,7 +300,7 @@ So the shapelet discovery can use the matrix profile as a tool for efficiently c
 
 <p align="center"><img src="pics/params_Dense.png"></p>
 
-<p align="center"><img src="pics/Dense_Model.png"></p>
+<p align="center"><img src="pics/dense_accuracy.png"></p>
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
