@@ -283,6 +283,5 @@ Kate Highnam, Kai Arulkumaran, Zachary Hanif, Nicholas R. Jennings
 2. Smote: Synthetic Minority Over-sampling Technique
 Authors: Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmeyer
 [https://arxiv.org/pdf/1106.1813](https://arxiv.org/pdf/1106.1813)
-3. Time Series Shapelets: A New Primitive for Data Mining
-Lexiang Ye, Eamonn Keogh
-[https://www.cs.ucr.edu/~eamonn/shaplet.pdf)
+3. Time Series Shapelets: A New Primitive for Data Mining. Lexiang Ye, Eamonn Keogh
+(https://www.cs.ucr.edu/~eamonn/shaplet.pdf)
