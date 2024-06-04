@@ -256,11 +256,12 @@ In our model, we used sinusoidal positional encoding.
 | :-------:                    | :----: | :---------: | :------: | :------: |
 |Dense model                   |  0.09  |     0.05    |   0.50   |   0.50   |
 |Dense model + embeddings      |  0.91  |     0.75    |   0.95   |   0.95   |
-|Dense Model-shapelet Discovery|        |             |          |          |
+|Dense Model-shapelet Discovery|  0.85  |     0.42    |   0.50   |   0.50   |
 |CNN model                     |  0.11  |     0.53    |   0.51   |   0.51   |
 |CNN model + embeddings        |  0.95  |     0.82    |   0.97   |   0.97   |
 |RNN model                     |  0.09  |     0.05    |   0.50   |   0.50   |
 |RNN model + embeddings.       |  0.95  |     0.82    |   0.97   |   0.97   |
+|LSTM model-shapelet Discovery |  0.85  |     0.42    |   0.50   |   0.50   |
 |Transformer                   |  0.95  |     0.82    |   0.97   |   0.97   |
 
 ## Application of the Matrix Profile
