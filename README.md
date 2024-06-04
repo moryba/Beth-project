@@ -275,35 +275,6 @@ With the concept of matrix profile, we tried to find conserved behaviours in the
 
 <p align="center"><img src="pics/Screenshot 2024-05-20 165934.png"></p>
 
-### Event Frequency 
-
-The following chart shows the entire frequency of suspicius and not suspicius event
-
-<p align="center"><img src="pics/frequency_sus&notsus.png"></p>
-
-### Shapelet Discovery 
-
-Shapelet discovery is a technique used in time series analysis to identify discriminative subpatterns, known as shapelets, within a set of time series data. Shapelets are subsequences that capture characteristic patterns or behaviors in the data.
-The process of shapelet discovery involves searching through the time series data to find subsequences that are representative of different classes or categories like in our case for **suspicious activities and not suspicious activities**. 
-The similarity or distance between each subsequence and the rest of the data is computed to determine its discriminative power. The shapelets with the highest discriminative power are selected as representative patterns.
-
-So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
-
-### How the comparison with the suspicious activity differs to the comparison with the not suspicious activity
-
-<p align="center"><img src="pics/Sus_NotSus.png"></p>
-
-### LSTM with the shaplet discovery method
-
-<p align="center"><img src="pics/params_LSTM.png"></p>
-
-<p align="center"><img src="pics/LSTM.png"></p>
-
-### Dense Model with the shapelet discovery method
-
-<p align="center"><img src="pics/params_Dense.png"></p>
-
-<p align="center"><img src="pics/dense_accuracy.png"></p>
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
