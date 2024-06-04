@@ -252,15 +252,16 @@ In our model, we used sinusoidal positional encoding.
 ### Optimizer
 
 ## Results
-| Model                  |Accuracy|Precision avg|Recall avg|ROC score |
-| :-------:              | :----: | :---------: | :------: | :------: |
-|Dense model             |  0.09  |     0.05    |   0.50   |   0.50   |
-|Dense model + embeddings|  0.91  |     0.75    |   0.95   |   0.95   |
-|CNN model               |  0.11  |     0.53    |   0.51   |   0.51   |
-|CNN model + embeddings  |  0.95  |     0.82    |   0.97   |   0.97   |
-|RNN model               |  0.09  |     0.05    |   0.50   |   0.50   |
-|RNN model + embeddings. |  0.95  |     0.82    |   0.97   |   0.97   |
-|Transformer             |  0.95  |     0.82    |   0.97   |   0.97   |
+| Model                        |Accuracy|Precision avg|Recall avg|ROC score |
+| :-------:                    | :----: | :---------: | :------: | :------: |
+|Dense model                   |  0.09  |     0.05    |   0.50   |   0.50   |
+|Dense model + embeddings      |  0.91  |     0.75    |   0.95   |   0.95   |
+|Dense Model-shapelet Discovery|        |             |          |          |
+|CNN model                     |  0.11  |     0.53    |   0.51   |   0.51   |
+|CNN model + embeddings        |  0.95  |     0.82    |   0.97   |   0.97   |
+|RNN model                     |  0.09  |     0.05    |   0.50   |   0.50   |
+|RNN model + embeddings.       |  0.95  |     0.82    |   0.97   |   0.97   |
+|Transformer                   |  0.95  |     0.82    |   0.97   |   0.97   |
 
 ## Application of the Matrix Profile
 
