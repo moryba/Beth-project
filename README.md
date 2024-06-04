@@ -76,18 +76,9 @@ Each of this dataset has those features:
 
  - args: arguments passed to this process (list of dictionaries)
 
- - sus: label (0/1) for suspicious activity (integer)
- We'll try to create a model that could classify the suspicious activities.
+ - sus: This is an integer label where 0 indicates non-suspicious activity and 1 indicates suspicious activity.
+ We want to develop a model that can accurately classify and identify suspicious activities based on this labeling system.
  <p align="center"><img src="pics/sus_distributions.png"></p>
-
-    - Training
-    <p align="center"><img src="pics/train_suspicious_plot.png"></p>
-
-    - Validation
-    <p align="center"><img src="pics/valid_suspicious_plot.png"></p>
-
-    - Testing
-    <p align="center"><img src="pics/test_suspicious_plot.png"></p>
 
  - evil: label (0/1) for evil activity (integer)
 
