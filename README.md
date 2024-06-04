@@ -217,7 +217,14 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
 
 ### LSTM neural network
 #### Model 1 (no embeddings)
+ - **Structure**
+ <p align="center"><img src="pics/LSTM-model1-structure.png"></p>
+
+ - **Training**
+ <p align="center"><img src="pics/LSTM-model1-training.png"></p>
+
 #### Model 2 (with embeddings)
+<<<<<<< Updated upstream
 #### Model 3 (shapelet discovery method)
 - **Structure**
 <p align="center"><img src="pics/LSTM_params.png"></p>
@@ -227,6 +234,15 @@ Each dense layer uses the 'lecun_normal' initializer for the kernel and a Random
   
 - **Confusion Matrix**
 <p align="center"><img src="pics/confusion_LSTM.png"></p>
+=======
+ - **Structure**
+ <p align="center"><img src="pics/LSTM-model2-structure.png"></p>
+
+ - **Training**
+ <p align="center"><img src="pics/LSTM-model2-training.png"></p>
+
+#### Model 3 (shapelet discovery)
+>>>>>>> Stashed changes
 
 ### Transformer
 #### Positional encoding:
