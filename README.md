@@ -207,7 +207,10 @@ The following chart describe how the comparison with the suspicious activity dif
       </p>
 
    - **Prediction**
-      **Model 2** shows a strong ability to correctly identify suspicious activities while maintaining a low false positive rate. However, there is still room for improvement in reducing the number of false negatives, which could enhance the model's sensitivity to suspicious activities. We have also very low false positive rate for unsuspicious class.
+      **Model 2** shows a strong ability to correctly identify suspicious activities while maintaining a low false positive rate.
+      However, there is still room for improvement in reducing the number of false negatives, which could enhance the model's sensitivity to suspicious activities.
+      We have also very low false positive rate for unsuspicious class.
+
       <p align="center"><img src="pics/Dense2_confusionmatrix.png"></p>
 
 #### Model 3:
