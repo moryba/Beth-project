@@ -147,7 +147,11 @@ We created 15 new columns in each datset, and assigns each element from the dict
 
 ### Ordinal encoding
 Ordinal encoding is a technique for converting categorical data, where variables have distinct labels or categories, into numerical form suitable for machine learning algorithms. It assigns a unique integer value to each category based on its order or rank.
-As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.
+<!-- As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.\
+Ordinal encoder will assign -1 value to unknown classes (labels not present in the training dataset)
+<p align="center"><img src="pics/Ordinal encoder.png"></p>
+
+
 ### Scaling
 Numerical features are scaled to similar range as they have different scales.
 Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
@@ -155,6 +159,8 @@ Since we used ordinal encoding for categorical features, scaling is not necessar
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
+<p align="center"><img src="pics/Smote_pca.png"></p>
+
 ### Shapelet discovery method
 Shapelet discovery is a technique used in time series analysis to identify discriminative subpatterns, known as shapelets, within a set of time series data. Shapelets are subsequences that capture characteristic patterns or behaviors in the data.
 The process of shapelet discovery involves searching through the time series data to find subsequences that are representative of different classes or categories like in our case for **suspicious activities and not suspicious activities**. 
