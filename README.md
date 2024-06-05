@@ -184,8 +184,8 @@ The following chart describe how the comparison with the suspicious activity dif
 
  - **Training**:
    <p float="left">
-      <img src="pics/Dense_training.png" height='40%' width='48%' />
-      <img src="pics/Dense_training2.png" height='40%' width='48%' /> 
+      <img src="pics/Dense_training.png" height='30%' width='40%' />
+      <img src="pics/Dense_training2.png" height='30%' width='40%' /> 
    </p>
 
 
