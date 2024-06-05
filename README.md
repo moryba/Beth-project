@@ -175,30 +175,36 @@ The following chart describe how the comparison with the suspicious activity dif
 ### Dense neural network
 
 #### Model 1:
-This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
-Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias
- - **Structure**:
+
+ - **Description**:
+   This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
+   Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
+
  <p align="center"><img src="pics/Dense-model1-structure.png" height='600' width='200'></p>
 
  - **Training**:
  <p align="center"><img src="pics/Dense_training.png"></p>
 
 #### Model 2:
- - **Structure**:
+ - **Description**:
+   This model is a neural network that handle differently categorical and numerical features. It incorporates embeddings for the categorical inputs, which are then reshaped and concatenated with numerical inputs, followed by multiple dense layers with ReLU activations and dropout for regularization.
+   The final output layer uses a sigmoid activation function to produce a binary classification result.
+
  <p align="center"><img src="pics/Dense-model2-structure.png"></p>
 
  - **Training**
  <p align="center"><img src="pics/Dense2_training.png" height='500'></p>
 
 #### Model 3:
- - **Structure**:
+ - **Description**:
+   This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
  <p align="center"><img src="pics/Dense-smote-structure.png" height='500'></p>
 
  - **Training**
  <p align="center"><img src="pics/Dense_smote_training.png"></p>
 
 #### Model 4: Dense model with the Shapelet Discovery method
- - **Structure**:
+ - **Description**:
  <p align="center"><img src="pics/params_Dense.png"></p>
 
  - **Training**
