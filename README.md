@@ -262,7 +262,11 @@ The following chart describe how the comparison with the suspicious activity dif
 
 
 #### Model 2
-   - **Description**
+   - **Description**\
+      This model integrates both categorical and numerical inputs, using embeddings and dense layers for preprocessing.
+      It creates embeddings for two categorical features, followed by linear transformations, and processes numerical features through a dense layer and reshaping.
+      The processed embeddings and numerical features are concatenated and passed through two Conv1D layers with ReLU activations for feature extraction.
+      Finally, the output layer is a dense layer with a sigmoid activation function for binary classification.
       <p align="center"><img src="pics/Conv-model2-structure.png" height='80%' width='60%'></p>
 
    - **Training**
@@ -277,11 +281,20 @@ The following chart describe how the comparison with the suspicious activity dif
 
 ### LSTM neural network
 #### Model 1 (no embeddings)
- - **Structure**
- <p align="center"><img src="pics/LSTM-model1-structure.png"></p>
+   - **Description**\
+      This model is a Sequential Long Short-Term Memory (LSTM) network designed for sequence data with an input shape of (47, 1).
+      It consists of four LSTM layers, each with 32 units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent overfitting.
+       The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for binary classification.
+      <p align="center"><img src="pics/LSTM-model1-structure.png" height='60%' width='20%'></p>
 
- - **Training**
- <p align="center"><img src="pics/LSTM-model1-training.png"></p>
+   - **Training**
+      <p align="left">
+         <img src="pics/LSTM1_training.png" height='35%' width='45%' />
+         <img src="pics/LSTM1_training2.png" height='35%' width='45%' /> 
+      </p>
+   
+   - **Prediction**
+      <p align="center"><img src="pics/LSTM-model1-confusionmatrix.png"></p> 
 
 #### Model 2 (with embeddings)
 <<<<<<< Updated upstream
