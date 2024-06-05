@@ -179,7 +179,7 @@ The following chart describe how the comparison with the suspicious activity dif
  - **Description**:
    This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
    Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
-
+   
    <p align="center"><img src="pics/Dense-model1-structure.png" height='80%' width='20%></p>
 
  - **Training**:
