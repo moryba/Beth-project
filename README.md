@@ -176,40 +176,46 @@ The following chart describe how the comparison with the suspicious activity dif
 
 #### Model 1:
 
-   - **Description**:
+   - **Description**
       This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
       Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
       
       <p align="center"><img src="pics/Dense-model1-structure.png" height='70%' width='20%'></p>
 
-   - **Training**:
+   - **Training**
       <p align="left">
          <img src="pics/Dense_training.png" height='35%' width='45%' />
          <img src="pics/Dense_training2.png" height='35%' width='45%' /> 
       </p>
 
 
-   - **Prediction**:
+   - **Prediction**\
       **Model 1** seems to predict only the "unsuspicious" class and fails to detect any "suspicious" activities, resulting in poor performance for identifying suspicious activities.
       <p align="center"><img src="pics/Dense_confusionmatrix.png" height='40%' width='40%'></p>
 
 #### Model 2:
- - **Description**:
-   This model is a neural network that handle differently categorical and numerical features. It incorporates embeddings for the categorical inputs, which are then reshaped and concatenated with numerical inputs, followed by multiple dense layers with ReLU activations and dropout for regularization.
-   The final output layer uses a sigmoid activation function to produce a binary classification result.
+   - **Description**
+      This model is a neural network that handle differently categorical and numerical features. It incorporates embeddings for the categorical inputs, which are then reshaped and concatenated with numerical inputs, followed by multiple dense layers with ReLU activations and dropout for regularization.
+      The final output layer uses a sigmoid activation function to produce a binary classification result.
 
- <p align="center"><img src="pics/Dense-model2-structure.png"></p>
+      <p align="center"><img src="pics/Dense-model2-structure.png"></p>
 
- - **Training**
- <p align="center"><img src="pics/Dense2_training.png" height='500'></p>
+   - **Training**
+      <p align="left">
+         <img src="pics/Dense2_training.png" height='35%' width='45%' />
+         <img src="pics/Dense2_training2.png" height='35%' width='45%' /> 
+      </p>
+
+   - **Prediction**
+      <p align="center"><img src="pics/Dense2_confusionmatrix.png"></p>
 
 #### Model 3:
- - **Description**:
-   This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
- <p align="center"><img src="pics/Dense-smote-structure.png" height='500'></p>
+   - **Description**
+      This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
+      <p align="center"><img src="pics/Dense-smote-structure.png" height='500'></p>
 
- - **Training**
- <p align="center"><img src="pics/Dense_smote_training.png"></p>
+   - **Training**
+      <p align="center"><img src="pics/Dense_smote_training.png"></p>
 
 #### Model 4: Dense model with the Shapelet Discovery method
  - **Description**:
