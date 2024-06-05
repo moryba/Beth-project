@@ -206,7 +206,7 @@ The following chart describe how the comparison with the suspicious activity dif
          <img src="pics/Dense2_training2.png" height='35%' width='45%' /> 
       </p>
 
-   - **Prediction**
+   - **Prediction**\
       **Model 2** shows a strong ability to correctly identify suspicious activities while maintaining a low false positive rate.
       However, there is still room for improvement in reducing the number of false negatives, which could enhance the model's sensitivity to suspicious activities.
       We have also very low false positive rate for unsuspicious class.
@@ -216,10 +216,19 @@ The following chart describe how the comparison with the suspicious activity dif
 #### Model 3:
    - **Description**
       This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
-      <p align="center"><img src="pics/Dense-smote-structure.png" height='500'></p>
+      <p align="center"><img src="pics/Dense-smote-structure.png" height='70%' width='20%'></p>
 
    - **Training**
-      <p align="center"><img src="pics/Dense_smote_training.png"></p>
+
+      <p align="left">
+         <img src="pics/Dense_smote_training2.png" height='35%' width='45%' />
+         <img src="pics/Dense_smote_training.png" height='35%' width='45%' /> 
+      </p>
+
+   - **Prediction**\
+      Despite the application of SMOTE, the model predicts only the "unsuspicious" class and fails to detect any "suspicious" activities. This suggests that the model is not effectively learning from the augmented data, despite the improved balance in our dataset.
+      
+      <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
 
 #### Model 4: Dense model with the Shapelet Discovery method
  - **Description**:
