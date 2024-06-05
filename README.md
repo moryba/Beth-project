@@ -183,15 +183,11 @@ The following chart describe how the comparison with the suspicious activity dif
  <p align="center"><img src="pics/Dense-model1-structure.png"></p>
 
  - **Training**:
+   <p float="left">
+      <img src="pics/Dense_training.png" height='40%' width='48%' />
+      <img src="pics/Dense_training2.png" height='40%' width='48%' /> 
+   </p>
 
-<div class="row">
-<div class="column">
-<img src="pics/Dense_training.png" height='40%' width='48%'>
-</div>
-<div class="column">
-<img src="pics/Dense_training2.png" height='40%' width='48%'>
-</div>
-</div>
 
    <p align="center"><img src="pics/Dense_training.png" height='400' width='500'></p>
    <p align="center"><img src="pics/Dense_training2.png" height='400' width='500'></p>
