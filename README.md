@@ -289,25 +289,14 @@ The following chart describe how the comparison with the suspicious activity dif
 
    - **Training**
       <p align="left">
-         <img src="pics/LSTM1_training.png" height='35%' width='45%' />
-         <img src="pics/LSTM1_training2.png" height='35%' width='45%' /> 
+         <img src="pics/LSTM-model1-training.png" height='35%' width='45%' />
+         <img src="pics/LSTM-model1-training2.png" height='35%' width='45%' /> 
       </p>
    
    - **Prediction**
       <p align="center"><img src="pics/LSTM-model1-confusionmatrix.png"></p> 
 
 #### Model 2 (with embeddings)
-<<<<<<< Updated upstream
-#### Model 3 (shapelet discovery method)
-- **Structure**
-<p align="center"><img src="pics/LSTM_params.png"></p>
-  
-- **Training**
-<p align="center"><img src="pics/LSTM_accuracy.png"></p>
-  
-- **Confusion Matrix**
-<p align="center"><img src="pics/confusion_LSTM.png"></p>
-=======
  - **Structure**
  <p align="center"><img src="pics/LSTM-model2-structure.png"></p>
 
@@ -315,7 +304,6 @@ The following chart describe how the comparison with the suspicious activity dif
  <p align="center"><img src="pics/LSTM-model2-training.png"></p>
 
 #### Model 3 (shapelet discovery)
->>>>>>> Stashed changes
 
 ### Transformer
 #### Positional encoding:
