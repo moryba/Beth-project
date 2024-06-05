@@ -180,20 +180,18 @@ The following chart describe how the comparison with the suspicious activity dif
    This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
    Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
 
- <p align="center"><img src="pics/Dense-model1-structure.png"></p>
+   <p align="center"><img src="pics/Dense-model1-structure.png" height='80%' width='20%></p>
 
  - **Training**:
    <p float="left">
-      <img src="pics/Dense_training.png" height='30%' width='40%' />
-      <img src="pics/Dense_training2.png" height='30%' width='40%' /> 
+      <img src="pics/Dense_training.png" height='35%' width='40%' />
+      <img src="pics/Dense_training2.png" height='35%' width='40%' /> 
    </p>
 
 
-   <p align="center"><img src="pics/Dense_training.png" height='400' width='500'></p>
-   <p align="center"><img src="pics/Dense_training2.png" height='400' width='500'></p>
-
  - **Prediction**:
- <p align="center"><img src="pics/Dense_confusionmatrix.png"></p>
+   **Model 1** seems to predict only the "unsuspicious" class and fails to detect any "suspicious" activities, resulting in poor performance for identifying suspicious activities.
+   <p align="center"><img src="pics/Dense_confusionmatrix.png" height='40%' width='40%'></p>
 
 #### Model 2:
  - **Description**:
