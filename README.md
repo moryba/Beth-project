@@ -185,10 +185,10 @@ The following chart describe how the comparison with the suspicious activity dif
  - **Training**:
   <div class="row">
   <div class="column">
-    <img src="pics/Dense_training.png" height='400' width='500'>
+    <img src="pics/Dense_training.png" height='40%' width='50%'>
   </div>
   <div class="column">
-    <img src="pics/Dense_training2.png" height='400' width='500'>
+    <img src="pics/Dense_training2.png" height='40%' width='50%'>
   </div>
 </div> 
  <p align="center"><img src="pics/Dense_training.png" height='400' width='500'></p>
