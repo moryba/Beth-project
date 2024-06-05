@@ -147,7 +147,7 @@ We created 15 new columns in each datset, and assigns each element from the dict
 
 ### Ordinal encoding
 Ordinal encoding is a technique for converting categorical data, where variables have distinct labels or categories, into numerical form suitable for machine learning algorithms. It assigns a unique integer value to each category based on its order or rank.
-<!-- As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.\
+As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.\
 Ordinal encoder will assign -1 value to unknown classes (labels not present in the training dataset)
 <p align="center"><img src="pics/Ordinal encoder.png"></p>
 
