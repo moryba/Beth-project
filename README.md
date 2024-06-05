@@ -227,33 +227,53 @@ The following chart describe how the comparison with the suspicious activity dif
 
    - **Prediction**\
       Despite the application of SMOTE, the model predicts only the "unsuspicious" class and fails to detect any "suspicious" activities. This suggests that the model is not effectively learning from the augmented data, despite the improved balance in our dataset.
-      
+
       <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
 
 #### Model 4: Dense model with the Shapelet Discovery method
- - **Description**:
- <p align="center"><img src="pics/params_Dense.png"></p>
+   - **Description**
+      <p align="center"><img src="pics/params_Dense.png"></p>
 
- - **Training**
- <p align="center"><img src="pics/Dense_Model.png"></p>
+   - **Training**
+      <p align="center"><img src="pics/Dense_Model.png"></p>
 
- - **Confusion Matrix**
-  <p align="center"><img src="pics/Dense_conf_matrix_shapelet.png"></p> 
+   - **Confusion Matrix**
+      <p align="center"><img src="pics/Dense_conf_matrix_shapelet.png"></p> 
    
 ### Convolutional neural network
 #### Model 1
- - **Structure**
- <p align="center"><img src="pics/Conv-model1-structure.png"></p>
+   - **Description**\
+      This model is a Convolutional Neural Network (CNN) designed for sequence data with an input shape of (47, 1).
+      It comprises four Conv1D layers with decreasing filter sizes (256, 128, 64, and 32) and ReLU activations, each followed by a dropout layer to prevent overfitting. 
+      The output layer is a dense layer with a sigmoid activation function for binary classification, using a Lecun normal initializer for the kernels and a custom random normal initializer for the biases.
 
- - **Training**
- <p align="center"><img src="pics/Conv-model1-training.png"></p>
+      <p align="center"><img src="pics/Conv-model1-structure.png" height='60%' width='20%'></p>
+
+   - **Training**
+
+      <p align="left">
+         <img src="pics/Conv-model1-training2.png" height='35%' width='45%' />
+         <img src="pics/Conv-model1-training.png" height='35%' width='45%' /> 
+      </p>
+
+   - **Prediction**
+      
+      <p align="center"><img src="pics/Conv-model1-confusionmatrix.png"></p> 
+
 
 #### Model 2
- - **Structure**
- <p align="center"><img src="pics/Conv-model2-structure.png"></p>
+   - **Description**
+      <p align="center"><img src="pics/Conv-model2-structure.png" height='80%' width='60%'></p>
 
- - **Training**
- <p align="center"><img src="pics/Conv-model2-training.png"></p>
+   - **Training**
+
+      <p align="left">
+         <img src="pics/Conv-model2-training2.png" height='35%' width='45%' />
+         <img src="pics/Conv-model2-training.png" height='35%' width='45%' /> 
+      </p>
+
+   - **Prediction**
+      <p align="center"><img src="pics/Conv-model2-confusionmatrix.png"></p> 
 
 ### LSTM neural network
 #### Model 1 (no embeddings)
