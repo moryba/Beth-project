@@ -294,36 +294,49 @@ The following chart describe how the comparison with the suspicious activity dif
       </p>
    
    - **Prediction**
-      <p align="center"><img src="pics/LSTM-model1-confusionmatrix.png"></p> 
+      <p align="center"><img src="pics/LSTM-model1-confusionmatrix.png"></p>
+      The confusion matrix indicates that the model is highly effective in identifying suspicious activities, correctly classifying 159,875 out of 171,459 suspicious instances while maintaining a perfect true negative rate with 17,508 correct unsuspicious classifications.
+      However, it still misses 11,584 suspicious instances
 
-#### Model 2 (with embeddings)
- - **Structure**
- <p align="center"><img src="pics/LSTM-model2-structure.png"></p>
+#### Model 2
+   - **Description**
+      <p align="center"><img src="pics/LSTM-model2-structure.png" height='60%' width='20%'></p>
 
- - **Training**
- <p align="center"><img src="pics/LSTM-model2-training.png"></p>
+   - **Training**
+      <p align="left">
+         <img src="pics/LSTM-model2-training.png" height='35%' width='45%' />
+         <img src="pics/LSTM-model2-training2.png" height='35%' width='45%' /> 
+      </p>
+
+   - **Prediction**
+      <p align="center"><img src="pics/LSTM-model2-confusionmatrix.png"></p>
 
 #### Model 3 (shapelet discovery)
 
 ### Transformer
-#### Positional encoding:
-The positional encoding gives information about the position of elements within a sequence to the input embeddings. This technique is crucial in the Transformer architecture, as it enables the model to understand the order of the sequence, which is otherwise lost in the absence of recurrence or convolution.
-In our model, we used sinusoidal positional encoding.
- - **Training**:
-<p align="center"><img src="pics/Transformer_training.png"></p>
 
- - **Confusion matrix**:
-<p align="center"><img src="pics/Transformer_confusionmatrix.png"></p>
-<p align="center"><img src="pics/Transformer_roc.png"></p>
+   - **Description**\
+      This model integrates categorical and numerical inputs using a transformer-based architecture.
+      Categorical inputs are embedded and transformed via dense layers, while numerical inputs are processed through a dense layer and reshaped.
+      The combined embeddings and numerical features are enhanced with positional encoding and passed through a transformer encoder block, followed by global average pooling and fully connected layers for classification, outputting a softmax activation for the final prediction.
 
- - Strengths:
-  - The model has high accuracy (94.6%).
-  - Perfect precision and specificity, meaning there are no false positives.
-  - High recall (94.1%) and a strong F1 score (97%).
+   - **Training**:
+      <p align="left">
+         <img src="pics/Transformer_training.png" height='35%' width='45%' />
+         <img src="pics/Transformer_training2.png" height='35%' width='45%' /> 
+      </p>
 
- - Weaknesses:
-  - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
-  - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
+   - **Prediction**:
+      <p align="center"><img src="pics/Transformer_confusionmatrix.png"></p>
+
+      - Strengths:
+         - The model has high accuracy (94.6%).
+         - Perfect precision and specificity, meaning there are no false positives.
+         - High recall (94.1%) and a strong F1 score (97%).
+
+      - Weaknesses:
+         - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
+         - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
 
 ### Embeddings layer
 #### Weights initializer
