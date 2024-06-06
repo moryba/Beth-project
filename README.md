@@ -226,7 +226,7 @@ The following chart describe how the comparison with the suspicious activity dif
       </p>
 
    - **Prediction**\
-      Despite the application of SMOTE, the model predicts only the "unsuspicious" class and fails to detect any "suspicious" activities. This suggests that the model is not effectively learning from the augmented data, despite the improved balance in our dataset.
+      After applying SMOTE, the model exclusively predicts the "unsuspicious" class and fails to identify any "suspicious" activities. This indicates that the model is not effectively learning from the augmented data, even with the improved balance in our dataset.
 
       <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
 
@@ -243,9 +243,9 @@ The following chart describe how the comparison with the suspicious activity dif
 ### Convolutional neural network
 #### Model 1
    - **Description**\
-      This model is a Convolutional Neural Network (CNN) designed for sequence data with an input shape of (47, 1).
-      It comprises four Conv1D layers with decreasing filter sizes (256, 128, 64, and 32) and ReLU activations, each followed by a dropout layer to prevent overfitting. 
-      The output layer is a dense layer with a sigmoid activation function for binary classification, using a Lecun normal initializer for the kernels and a custom random normal initializer for the biases.
+      This model is a Convolutional Neural Network (CNN) with an input shape of (47, 1).\
+      It comprises four Conv1D layers with decreasing filter sizes (256, 128, 64, and 32) and ReLU activations, each followed by a dropout layer to prevent overfitting. We applied a Lecun normal initializer for the kernels and a custom random normal initializer for the biases.\
+      The output layer is a dense layer with a sigmoid activation function for binary classification.
 
       <p align="center"><img src="pics/Conv-model1-structure.png" height='60%' width='20%'></p>
 
@@ -263,9 +263,9 @@ The following chart describe how the comparison with the suspicious activity dif
 
 #### Model 2
    - **Description**\
-      This model integrates both categorical and numerical inputs, using embeddings and dense layers for preprocessing.
-      It creates embeddings for two categorical features, followed by linear transformations, and processes numerical features through a dense layer and reshaping.
-      The processed embeddings and numerical features are concatenated and passed through two Conv1D layers with ReLU activations for feature extraction.
+      This model handles categorical and numerical inputs separately, using embeddings and dense layers for preprocessing.\
+      It creates embeddings for two categorical features (args and stackaddresses), followed by linear transformations, and processes numerical features through a dense layer and reshaping.\
+      The processed embeddings and numerical features are concatenated and passed through two Conv1D layers with ReLU activations for feature extraction.\
       Finally, the output layer is a dense layer with a sigmoid activation function for binary classification.
       <p align="center"><img src="pics/Conv-model2-structure.png" height='80%' width='60%'></p>
 
