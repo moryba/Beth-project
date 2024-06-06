@@ -347,11 +347,6 @@ The following chart describe how the comparison with the suspicious activity dif
          - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
          - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
 
-### Embeddings layer
-#### Weights initializer
-#### Kernel initializer
-### Activation functions
-### Optimizer
 
 ## Results
 | Model                        |Accuracy|Precision avg|Recall avg|ROC score |
@@ -365,6 +360,10 @@ The following chart describe how the comparison with the suspicious activity dif
 |RNN model + embeddings.       |  0.95  |     0.82    |   0.97   |   0.97   |
 |LSTM model-shapelet Discovery |  0.85  |     0.42    |   0.50   |   0.50   |
 |Transformer                   |  0.95  |     0.82    |   0.97   |   0.97   |
+
+## Discussion
+   - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
+   - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
 
 ## Application of the Matrix Profile
 
