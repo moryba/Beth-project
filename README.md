@@ -300,7 +300,7 @@ The following chart describe how the comparison with the suspicious activity dif
 
 #### Model 2
    - **Description**
-      <p align="center"><img src="pics/LSTM-model2-structure.png" height='60%' width='20%'></p>
+      <p align="center"><img src="pics/LSTM-model2-structure.png" height='70%' width='40%'></p>
 
    - **Training**
       <p align="left">
@@ -319,6 +319,15 @@ The following chart describe how the comparison with the suspicious activity dif
       This model integrates categorical and numerical inputs using a transformer-based architecture.
       Categorical inputs are embedded and transformed via dense layers, while numerical inputs are processed through a dense layer and reshaped.
       The combined embeddings and numerical features are enhanced with positional encoding and passed through a transformer encoder block, followed by global average pooling and fully connected layers for classification, outputting a softmax activation for the final prediction.
+
+      - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.
+       This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
+
+       - The transformer_encoder_block applies multi-head self-attention to the inputs, enabling the model to focus on different parts of the sequence simultaneously.
+       This is followed by a dropout layer for regularization and layer normalization to stabilize and speed up training.
+       Finally, a feed-forward neural network with a dense layer, dropout, and another layer normalization is used to further process the attention output, enhancing the model's capacity to capture complex patterns in the data.
+
+       <p align="center"><img src="pics/Transformer-structure.png" height='80%' width='50%'></p>
 
    - **Training**:
       <p align="left">
