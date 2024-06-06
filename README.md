@@ -318,7 +318,7 @@ The following chart describe how the comparison with the suspicious activity dif
    - **Description**\
       This model integrates categorical and numerical inputs using a transformer-based architecture.\
       Categorical inputs are embedded and transformed via dense layers, while numerical inputs are processed through a dense layer and reshaped.\
-      The combined embeddings and numerical features are enhanced with positional encoding and passed through a transformer encoder block, followed by global average pooling and fully connected layers for classification, outputting a softmax activation for the final prediction.
+      The combined embeddings and numerical features are enhanced with positional encoding and passed through several transformer encoder blocks, followed by global average pooling and fully connected layers for classification, outputting a softmax activation for the final prediction.
 
       - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.\
        This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
