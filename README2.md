@@ -235,17 +235,21 @@ We created 15 new columns in each datset, and assigns each element from the dict
 Ordinal encoding is a technique for converting categorical data, where variables have distinct labels or categories, into numerical form suitable for machine learning algorithms. It assigns a unique integer value to each category based on its order or rank.
 As our approch is for an unsupervised model, we used ordinal encoder to handle new classes not present in the training dataset.\
 Ordinal encoder will assign -1 value to unknown classes (labels not present in the training dataset)
-<p align="center"><img src="pics/Ordinal encoder.png"></p>
 
+![Ordinal encoder](pics/Ordinal encoder.png){width=50%, height=50%}
 
+\newpage
 ## Scaling
 Numerical features are scaled to similar range as they have different scales.
 Since we used ordinal encoding for categorical features, scaling is not necessary. Ordinal encoding preserves the order of the categories, but the assigned values don't necessarily reflect their magnitude.
+
 ## Smote
 Dealing with unbalanced data can be tricky, most of the machine learning model will give good results for big classes and poor performance on the minority althought, as it is our case, minority class is more important.
 To balance that, we tried to use Smote library combined as it is adviced with randoom undersampling for the majority class.
 SMOTE (Synthetic Minority Oversampling TEchnique) works by interpolating new instances along line segments joining existing minority class instances.
-<p align="center"><img src="pics/Smote_pca.png"></p>
+
+![Smote](pics/Smote_pca.png){width=50%, height=50%}
+
 
 ## Shapelet discovery method
 Shapelet discovery is a technique used in time series analysis to identify discriminative subpatterns, known as shapelets, within a set of time series data. Shapelets are subsequences that capture characteristic patterns or behaviors in the data.
@@ -255,9 +259,13 @@ The similarity or distance between each subsequence and the rest of the data is 
 So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
 
 The following chart describe how the comparison with the suspicious activity differs to the comparison with the not suspicious activity.
-<p align="center"><img src="pics/Sus_NotSus.png"></p>
+
+![Shapelet discovery](pics/Sus_NotSus.png){width=50%, height=50%}
+
+\newpage
 
 # Models
+
 ## Dense neural network
 
 ### Model 1:
@@ -266,31 +274,42 @@ The following chart describe how the comparison with the suspicious activity dif
       This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
       Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
       
-      <p align="center"><img src="pics/Dense-model1-structure.png" height='70%' width='20%'></p>
+      ![Dense neural network - Model 1](pics/Dense-model1-structure.png){width=50%, height=40%}
+
+\newpage
 
    - **Training**
-      <p align="left">
-         <img src="pics/Dense_training.png" height='35%' width='45%' />
-         <img src="pics/Dense_training2.png" height='35%' width='45%' /> 
-      </p>
-
-
+      
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/Dense_training.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/Dense_training2.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 1: accuracy and loss} % This is optional, but you can use it if needed
+\end{figure}
+      
    - **Prediction**\
       **Model 1** seems to predict only the "unsuspicious" class and fails to detect any "suspicious" activities, resulting in poor performance for identifying suspicious activities.
-      <p align="center"><img src="pics/Dense_confusionmatrix.png" height='40%' width='40%'></p>
+      
+      ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=40%, height=40%}
 
 ### Model 2:
    - **Description**
       This model is a neural network that handle differently categorical and numerical features. It incorporates embeddings for the categorical inputs, which are then reshaped and concatenated with numerical inputs, followed by multiple dense layers with ReLU activations and dropout for regularization.
       The final output layer uses a sigmoid activation function to produce a binary classification result.
 
-      <p align="center"><img src="pics/Dense-model2-structure.png"></p>
+      ![Dense neural network - Model 2](pics/Dense-model2-structure.png){width=50%, height=40%}
 
    - **Training**
-      <p align="left">
-         <img src="pics/Dense2_training.png" height='35%' width='45%' />
-         <img src="pics/Dense2_training2.png" height='35%' width='45%' /> 
-      </p>
+      
+      ![Dense neural network-Model 2 Accuracy](pics/Dense2_training.png){width=15%, height=15%} ![Dense neural network-Model 2 Loss](pics/Dense2_training2.png){width=15%, height=15%}
 
    - **Prediction**\
       **Model 2** shows a strong ability to correctly identify suspicious activities while maintaining a low false positive rate.
