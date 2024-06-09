@@ -329,7 +329,7 @@ The following chart describe how the comparison with the suspicious activity dif
        This is followed by a dropout layer for regularization and layer normalization to stabilize and speed up training.\
        Finally, a feed-forward neural network with a dense layer, dropout, and another layer normalization is used to further process the attention output, enhancing the model's capacity to capture complex patterns in the data.
 
-       - The WarmUpCosineDecay class defines a custom learning rate schedule that combines an initial warmup phase with a cosine decay schedule.\
+       - This model uses Adam optimizer with a **WarmUpCosineDecay** learning rate.\
        During the warmup phase, the learning rate increases linearly, and once the warmup steps are completed, it follows a cosine decay pattern to gradually reduce the learning rate.
 
        <p align="center"><img src="pics/Transformer_cosinewarmupdecay.png" height='50%' width='40%'></p>
