@@ -316,7 +316,9 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
      units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent 
      overfitting.The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for 
      binary classification.
-    <p align="center"><img src="pics/pics/Screenshot 2024-06-10 122339.png"></p>
+     
+    <p align="center"><img src="pics/pics/Screenshot 2024-06-10 122339.png" height='80%' width='60%'></p>
+    
    - **Training**
        
    - **Prediction**
