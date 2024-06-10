@@ -410,8 +410,7 @@ A relatively low number of False Negatives (1989), indicating the model occasion
 ## Discussion
    - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
    - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
-   - the Shapelet Discovery method, when applied to models such as the Decision Tree Classifier or the Dense models on a small sample of 230.000 data points, it gives good accuracy levels. Therefore, this methodology doesn't seem the most appropriate for the structure of the BETH dataset and the high computational level that it requires. 
-
+   - The Shapelet Discovery method, when applied to models such as the Decision Tree Classifier or the Dense models on a small sample of 230.000 data points, it gives good accuracy levels. Therefore, this methodology, because of the structure of the BETH dataset (imbalances between the classes) and the high computational level that it requires, it doesn't seem the most effective method. 
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
