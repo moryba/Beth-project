@@ -229,16 +229,16 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 
       <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
 
-#### Model 4: Dense model with the Shapelet Discovery method
+#### Model 4- Dense model with the Shapelet Discovery method :
    - **Description**
-      <p align="center"><img src="pics/params_Dense.png"></p>
+      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/6fdba1a9-2b1f-4550-a04a-bd38b3fe4f63)
 
    - **Training**
-      <p align="center"><img src="pics/Dense_Model.png"></p>
+      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/f826c368-0eba-4a86-b30a-f023234ade41)
 
    - **Confusion Matrix**
-      <p align="center"><img src="pics/Dense_conf_matrix_shapelet.png"></p> 
-   
+      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/dcad3217-4f43-4b16-91ef-22b8899ce6f7)
+
 ### Convolutional neural network
 #### Model 1
    - **Description**\
