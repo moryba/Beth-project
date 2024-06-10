@@ -328,7 +328,9 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 
      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/3bbb3975-2c9f-4e71-be03-50adc51a0ca6)
 
-   - **Training**
+   - **Training**\
+   - As the graphes shows, the LSTM doesn't give good resulst when you apply the shapeet discovery method. The performace of the model is really poor and ineffective for this  
+     kind of data. 
 
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/948be4c1-dcdf-4a4f-80fe-9d90e94cabe9)
  
@@ -402,8 +404,8 @@ A relatively low number of False Negatives (1989), indicating the model occasion
 | Model                        |Accuracy|Precision avg|Recall avg|ROC score |
 | :-------:                    | :----: | :---------: | :------: | :------: |
 |Decision tree classifier      |  0.97  |     0.98    |    0.97  |     0.97 |
-|LSTM model                    |        |             |          |          |
-|Dense Model                   |        |             |          |          |
+|LSTM model                    |   0.45 |     0.35    |     0.41 |     0.41 |
+|Dense Model                   | 0.96   |      0.97   |  0.95    |     0.95 |
 
 
 ## Discussion
