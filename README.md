@@ -403,21 +403,14 @@ A relatively low number of False Negatives (1989), indicating the model occasion
 | Model                        |Accuracy|Precision avg|Recall avg|ROC score |
 | :-------:                    | :----: | :---------: | :------: | :------: |
 |Decision tree classifier      |  0.97  |     0.98    |    0.97  |     0.97 |
-|LSTM model                    |   0.45 |     0.35    |     0.41 |     0.41 |
-|Dense Model                   | 0.96   |      0.97   |  0.95    |     0.95 |
+|LSTM model                    |  0.45  |     0.35    |    0.41  |     0.41 |
+|Dense Model                   |  0.96  |     0.97    |  0.95    |     0.95 |
 
 
 ## Discussion
    - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
    - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
-
-## Application of the Matrix Profile
-
-With the concept of matrix profile, we tried to find conserved behaviours in the data. In fact, a comparison between sequences can be done by looking at the euclidean distance between all the points in two subsequences and represent the distances in a matrix profile.
-
-![Alt Text](pics/pairwise_euclidean_distance.gif)
-
-<p align="center"><img src="pics/Screenshot 2024-05-20 165934.png"></p>
+   - the Shapelet Discovery method, when applied to models such as the Decision Tree Classifier or the Dense models on a small sample of 230.000 data points, it gives good accuracy levels. Therefore, this methodology doesn't seem the most appropriate for the structure of the BETH dataset and the high computational level that it requires. 
 
 
 ## References
