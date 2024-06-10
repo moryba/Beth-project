@@ -312,6 +312,14 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 
 #### Model 3 (shapelet discovery)
 
+### Decision Tree Classifier
+   - **Description**
+
+   - **Training**
+       
+   - **Prediction**
+     <p align="center"><img src="pics/Screenshot 2024-06-10 121543.png"></p>
+
 ### Transformer
 
    - **Description**\
@@ -350,6 +358,7 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
       - Weaknesses:
          - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
          - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
+  
 
 
 ## Results
@@ -366,7 +375,7 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 **Shapelet Discovery method with 230.000 data points**
 | Model                        |Accuracy|Precision avg|Recall avg|ROC score |
 | :-------:                    | :----: | :---------: | :------: | :------: |
-|Decision tree classifier      |        |             |          |          |
+|Decision tree classifier      |  0.97  |     0.98    |    0.97  |     0.97 |
 |LSTM model                    |        |             |          |          |
 |Dense Model                   |        |             |          |          |
 
