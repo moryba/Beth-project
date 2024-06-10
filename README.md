@@ -168,8 +168,7 @@ The similarity or distance between each subsequence and the rest of the data is 
 
 So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
 
-The following chart describe how the comparison with the suspicious activity differs to the comparison with the not suspicious activity.
-<p align="center"><img src="pics/Sus_NotSus.png"></p>
+For the high computational requiremnts, in order to experiment the **Shapelet Discovery**, we decided to adopt a sample of 230.000 datapoints and see how this method performs for the Decison tree classifier, LSTM and the Dense model.
 
 ## Models
 ### Dense neural network
@@ -358,13 +357,19 @@ The following chart describe how the comparison with the suspicious activity dif
 | :-------:                    | :----: | :---------: | :------: | :------: |
 |Dense model                   |  0.09  |     0.05    |   0.50   |   0.50   |
 |Dense model + embeddings      |  0.91  |     0.75    |   0.95   |   0.95   |
-|Dense Model-shapelet Discovery|  0.85  |     0.42    |   0.50   |   0.50   |
 |CNN model                     |  0.11  |     0.53    |   0.51   |   0.51   |
 |CNN model + embeddings        |  0.95  |     0.82    |   0.97   |   0.97   |
 |RNN model                     |  0.09  |     0.05    |   0.50   |   0.50   |
 |RNN model + embeddings.       |  0.95  |     0.82    |   0.97   |   0.97   |
-|LSTM model-shapelet Discovery |  0.85  |     0.42    |   0.50   |   0.50   |
 |Transformer                   |  0.95  |     0.82    |   0.97   |   0.97   |
+
+**Shapelet Discovery method with 230.000 data points**
+| Model                        |Accuracy|Precision avg|Recall avg|ROC score |
+| :-------:                    | :----: | :---------: | :------: | :------: |
+|Decision tree classifier      |        |             |          |          |
+|LSTM model                    |        |             |          |          |
+|Dense Model                   |        |             |          |          |
+
 
 ## Discussion
    - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
