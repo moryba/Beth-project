@@ -328,7 +328,7 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/891f1798-9f52-48c7-bc3c-5598cb566d24)
 
 
-### Decision Tree Classifier
+### Decision Tree Classifier with Shapelet Discovery method
        
    - **Prediction**\
 The confusuion matrix shows a small number of False Positives (25), which is good as it shows the model rarely predicts class 1 when the true class is 0.
