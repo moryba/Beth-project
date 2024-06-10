@@ -310,7 +310,16 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
    - **Prediction**
       <p align="center"><img src="pics/LSTM-model2-confusionmatrix.png"></p>
 
-#### Model 3 (shapelet discovery)
+#### Model 3 (shapelet discovery method)
+   - **Description**
+     This model is a Sequential Long Short-Term Memory (LSTM) network designed for sequence data with an input shape of (1, 1).It consists of four LSTM layers, each with 32 
+     units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent 
+     overfitting.The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for 
+     binary classification.
+    <p align="center"><img src="pics/pics/Screenshot 2024-06-10 122339.png"></p>
+   - **Training**
+       
+   - **Prediction**
 
 ### Decision Tree Classifier
    - **Description**
