@@ -311,30 +311,31 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
       <p align="center"><img src="pics/LSTM-model2-confusionmatrix.png"></p>
 
 #### Model 3 (shapelet discovery method)
-   - **Description**
+   - **Description**\
      This model is a Sequential Long Short-Term Memory (LSTM) network designed for sequence data with an input shape of (1, 1).It consists of four LSTM  layers, each with 32  
      units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent 
      overfitting.The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for 
      binary classification.
 
-![image](https://github.com/JamBelg/Beth-project/assets/24205674/3bbb3975-2c9f-4e71-be03-50adc51a0ca6)
+     ![image](https://github.com/JamBelg/Beth-project/assets/24205674/3bbb3975-2c9f-4e71-be03-50adc51a0ca6)
 
    - **Training**
 
- ![image](https://github.com/JamBelg/Beth-project/assets/24205674/948be4c1-dcdf-4a4f-80fe-9d90e94cabe9)
+      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/948be4c1-dcdf-4a4f-80fe-9d90e94cabe9)
  
    - **Prediction**
 
-![image](https://github.com/JamBelg/Beth-project/assets/24205674/891f1798-9f52-48c7-bc3c-5598cb566d24)
+     ![image](https://github.com/JamBelg/Beth-project/assets/24205674/891f1798-9f52-48c7-bc3c-5598cb566d24)
 
 
 ### Decision Tree Classifier
-   - **Description**
-
-   - **Training**
        
-   - **Prediction**
-     <p align="center"><img src="pics/Screenshot 2024-06-10 121543.png"></p>
+   - **Prediction**\
+The confusuion matrix shows a small number of False Positives (25), which is good as it shows the model rarely predicts class 1 when the true class is 0.
+A relatively low number of False Negatives (1989), indicating the model occasionally misses class 1 predictions. Overall the model seems to learn. 
+     
+     ![image](https://github.com/JamBelg/Beth-project/assets/24205674/f2a66139-dd17-4c7c-bb1f-d0f506833c5c)
+
 
 ### Transformer
 
