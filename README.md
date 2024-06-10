@@ -329,8 +329,7 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/3bbb3975-2c9f-4e71-be03-50adc51a0ca6)
 
    - **Training**\
-   - As the graphes shows, the LSTM doesn't give good resulst when you apply the shapeet discovery method. The performace of the model is really poor and ineffective for this  
-     kind of data. 
+     As the graphes show, the LSTM doesn't give good resulst when you apply the shapeet discovery method. The performace of the model is really poor and ineffective.
 
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/948be4c1-dcdf-4a4f-80fe-9d90e94cabe9)
  
