@@ -168,6 +168,12 @@ The similarity or distance between each subsequence and the rest of the data is 
 
 So the shapelet discovery can use the matrix profile as a tool for efficiently computing the distances or similarities between subsequences. By utilizing the matrix profile, shapelet discovery algorithms can reduce the computational complexity and speed up the process of identifying shapelets.
 
+With the concept of matrix profile, we tried to find conserved behaviours in the data. In fact, a comparison between sequences can be done by looking at the euclidean distance between all the points in two subsequences and represent the distances in a matrix profile.
+
+![Alt Text](pics/pairwise_euclidean_distance.gif)
+
+<p align="center"><img src="pics/Screenshot 2024-05-20 165934.png"></p>
+
 For the high computational requiremnts, in order to experiment the **Shapelet Discovery**, we decided to adopt a sample of 230.000 datapoints and see how this method performs for the Decison tree classifier, LSTM and the Dense model.
 
 ## Models
@@ -231,12 +237,15 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 
 #### Model 4- Dense model with the Shapelet Discovery method :
    - **Description**
+     
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/6fdba1a9-2b1f-4550-a04a-bd38b3fe4f63)
 
    - **Training**
+     
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/f826c368-0eba-4a86-b30a-f023234ade41)
 
    - **Confusion Matrix**
+     
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/dcad3217-4f43-4b16-91ef-22b8899ce6f7)
 
 ### Convolutional neural network
