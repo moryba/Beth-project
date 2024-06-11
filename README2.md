@@ -8,9 +8,10 @@ output:
     toc_depth: 3
     number_sections: true 
     df_print: paged
-date: "2024-06-09"
+date: "2024-06-11"
 ---
 
+<div style="text-align: right">
 
 # Introduction 
 The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models [1].
@@ -107,21 +108,18 @@ Each of this dataset has those features:
 
 \newpage
 
- - stackAddresses: memory values relevant to the process (list of integer)
- 
- ![Stack length name](pics/train_stackaddresses-length_plot2.png){width=70%, height=33%}
- 
-        - All three datasets (training, validation, and testing) have a similar distribution of stack addresses list lengths.
-  
-        - The most frequent stack addresses list length is 2, followed by 1 and 0.
-  
-        - There is a significant drop in frequency as the stack addresses list length increases beyond 3, with very few instances having lengths greater than 10.
- 
- ![Stack addresses](pics/train_stackaddresses_plot.png){width=70%, height=33%}
+  - stackAddresses: memory values relevant to the process (list of integer)
+    - All three datasets (training, validation, and testing) have a similar distribution of stack addresses list lengths.
+    - The most frequent stack addresses list length is 2, followed by 1 and 0.
+    - There is a significant drop in frequency as the stack addresses list length increases beyond 3, with very few instances having lengths greater than 10.
+    - The stack address "2048.0" is by far the most common, with a count exceeding 40,000.
+    - The plot indicates a highly skewed distribution with a few stack addresses being extremely common and many others being relatively rare.
+    
+  ![Stack length name](pics/train_stackaddresses-length_plot2.png){width=70%, height=40%}
+    
+  ![Stack addresses](pics/train_stackaddresses_plot.png){width=70%, height=40%}
 
-        - The stack address "2048.0" is by far the most common, with a count exceeding 40,000.
-
-        - The plot indicates a highly skewed distribution with a few stack addresses being extremely common and many others being relatively rare.
+    
 
 \newpage
 
@@ -279,26 +277,27 @@ The following chart describe how the comparison with the suspicious activity dif
 \newpage
 
    - **Training**
-      
+
 \begin{figure}[h!]
   \centering
-  \begin{minipage}{0.45\textwidth}
+  \begin{minipage}{\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{pics/Dense_training.png}
+    \includegraphics[width=0.4\textwidth]{pics/Dense_training.png}
     % \caption{Caption for first image} % optional
-  \end{minipage}\hfill
-  \begin{minipage}{0.45\textwidth}
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{pics/Dense_training2.png}
+    \includegraphics[width=0.4\textwidth]{pics/Dense_training2.png}
     % \caption{Caption for second image} % optional
   \end{minipage}
-  \caption{Model 1: accuracy and loss} % This is optional, but you can use it if needed
+  \caption{Model 1 accuracy and loss}
 \end{figure}
-      
+
    - **Prediction**\
       **Model 1** seems to predict only the "unsuspicious" class and fails to detect any "suspicious" activities, resulting in poor performance for identifying suspicious activities.
       
-      ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=40%, height=40%}
+      ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=25%, height=25%}
+
 
 ### Model 2:
    - **Description**
@@ -308,42 +307,75 @@ The following chart describe how the comparison with the suspicious activity dif
       ![Dense neural network - Model 2](pics/Dense-model2-structure.png){width=50%, height=40%}
 
    - **Training**
-      
-      ![Dense neural network-Model 2 Accuracy](pics/Dense2_training.png){width=15%, height=15%} ![Dense neural network-Model 2 Loss](pics/Dense2_training2.png){width=15%, height=15%}
+
+\newpage
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{pics/Dense2_training.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{pics/Dense2_training2.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 2 accuracy and loss}
+\end{figure}
+
 
    - **Prediction**\
       **Model 2** shows a strong ability to correctly identify suspicious activities while maintaining a low false positive rate.
       However, there is still room for improvement in reducing the number of false negatives, which could enhance the model's sensitivity to suspicious activities.
       We have also very low false positive rate for unsuspicious class.
 
-      <p align="center"><img src="pics/Dense2_confusionmatrix.png"></p>
+      ![Model 2 Confusion matrix](pics/Dense2_confusionmatrix.png){width=25%, height=25%}
+
 
 ### Model 3:
    - **Description**
       This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
-      <p align="center"><img src="pics/Dense-smote-structure.png" height='70%' width='20%'></p>
+      
+      ![Dense neural network - Model 3](pics/Dense-smote-structure.png){width=50%, height=40%}
+
+\newpage
 
    - **Training**
 
-      <p align="left">
-         <img src="pics/Dense_smote_training2.png" height='35%' width='45%' />
-         <img src="pics/Dense_smote_training.png" height='35%' width='45%' /> 
-      </p>
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{pics/Dense_smote_training2.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{pics/Dense_smote_training.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 3 accuracy and loss}
+\end{figure}
+
 
    - **Prediction**\
       After applying SMOTE, the model exclusively predicts the "unsuspicious" class and fails to identify any "suspicious" activities. This indicates that the model is not effectively learning from the augmented data, even with the improved balance in our dataset.
 
-      <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
+      ![Model 3 Confusion matrix](pics/Dense_smote_confusionmatrix.png){width=25%, height=25%}
 
 ### Model 4: Dense model with the Shapelet Discovery method
    - **Description**
-      <p align="center"><img src="pics/params_Dense.png"></p>
+      
+      ![Dense neural network - Model 4](pics/params_Dense.png){width=50%, height=40%}
 
    - **Training**
-      <p align="center"><img src="pics/Dense_Model.png"></p>
+      ![Model 4 accuracy and loss](pics/Dense_Model.png){width=50%, height=40%}
 
    - **Confusion Matrix**
-      <p align="center"><img src="pics/Dense_conf_matrix_shapelet.png"></p> 
+   
+      ![Model 4 confusion matrix](pics/Dense_conf_matrix_shapelet.png){width=50%, height=40%}
    
 ## Convolutional neural network
 ### Model 1
@@ -352,18 +384,30 @@ The following chart describe how the comparison with the suspicious activity dif
       It comprises four Conv1D layers with decreasing filter sizes (256, 128, 64, and 32) and ReLU activations, each followed by a dropout layer to prevent overfitting. We applied a Lecun normal initializer for the kernels and a custom random normal initializer for the biases.\
       The output layer is a dense layer with a sigmoid activation function for binary classification.
 
-      <p align="center"><img src="pics/Conv-model1-structure.png" height='60%' width='20%'></p>
+      ![Conv. neural network - Model 1](pics/Conv-model1-structure.png){width=50%, height=40%}
 
    - **Training**
 
-      <p align="left">
-         <img src="pics/Conv-model1-training2.png" height='35%' width='45%' />
-         <img src="pics/Conv-model1-training.png" height='35%' width='45%' /> 
-      </p>
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Conv-model1-training2.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Conv-model1-training.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 1 accuracy and loss}
+\end{figure}
+
+\newpage
 
    - **Prediction**
       
-      <p align="center"><img src="pics/Conv-model1-confusionmatrix.png"></p> 
+      ![Model 1 Confusion matrix](pics/Conv-model1-confusionmatrix.png){width=25%, height=25%}
 
 
 ### Model 2
@@ -372,17 +416,30 @@ The following chart describe how the comparison with the suspicious activity dif
       It creates embeddings for two categorical features (args and stackaddresses), followed by linear transformations, and processes numerical features through a dense layer and reshaping.\
       The processed embeddings and numerical features are concatenated and passed through two Conv1D layers with ReLU activations for feature extraction.\
       Finally, the output layer is a dense layer with a sigmoid activation function for binary classification.
-      <p align="center"><img src="pics/Conv-model2-structure.png" height='80%' width='60%'></p>
+      
+      ![Conv. neural network - Model 2](pics/Conv-model2-structure.png){width=50%, height=40%}
 
    - **Training**
 
-      <p align="left">
-         <img src="pics/Conv-model2-training2.png" height='35%' width='45%' />
-         <img src="pics/Conv-model2-training.png" height='35%' width='45%' /> 
-      </p>
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Conv-model2-training2.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Conv-model2-training.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 2 accuracy and loss}
+\end{figure}
+
 
    - **Prediction**
-      <p align="center"><img src="pics/Conv-model2-confusionmatrix.png"></p> 
+   
+      ![Model 2 Confusion matrix](pics/Conv-model2-confusionmatrix.png){width=25%, height=25%}
 
 ## LSTM neural network
 ### Model 1 (no embeddings)
@@ -390,33 +447,66 @@ The following chart describe how the comparison with the suspicious activity dif
       This model is a Sequential Long Short-Term Memory (LSTM) network designed for sequence data with an input shape of (47, 1).
       It consists of four LSTM layers, each with 32 units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent overfitting.
        The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for binary classification.
-      <p align="center"><img src="pics/LSTM-model1-structure.png" height='60%' width='20%'></p>
+       
+       ![LSTM - Model 1](pics/LSTM-model1-structure.png){width=50%, height=40%}
 
    - **Training**
-      <p align="left">
-         <img src="pics/LSTM-model1-training.png" height='35%' width='45%' />
-         <img src="pics/LSTM-model1-training2.png" height='35%' width='45%' /> 
-      </p>
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/LSTM-model1-training.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/LSTM-model1-training2.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 1 accuracy and loss}
+\end{figure}
+
    
    - **Prediction**
-      <p align="center"><img src="pics/LSTM-model1-confusionmatrix.png"></p>
+      
+      ![Model 1 Confusion matrix](pics/LSTM-model1-confusionmatrix.png){width=25%, height=25%}
+
       The confusion matrix indicates that the model is highly effective in identifying suspicious activities, correctly classifying 159,875 out of 171,459 suspicious instances while maintaining a perfect true negative rate with 17,508 correct unsuspicious classifications.
       However, it still misses 11,584 suspicious instances
 
 ### Model 2
    - **Description**
-      <p align="center"><img src="pics/LSTM-model2-structure.png" height='80%' width='60%'></p>
+   
+      ![LSTM - Model 2](pics/LSTM-model2-structure.png){width=50%, height=40%}
+      
+\newpage
 
    - **Training**
-      <p align="left">
-         <img src="pics/LSTM-model2-training.png" height='35%' width='45%' />
-         <img src="pics/LSTM-model2-training2.png" height='35%' width='45%' /> 
-      </p>
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/LSTM-model2-training.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/LSTM-model2-training2.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Model 2 accuracy and loss}
+\end{figure}
+
 
    - **Prediction**
-      <p align="center"><img src="pics/LSTM-model2-confusionmatrix.png"></p>
+   
+      ![Model 2 Confusion matrix](pics/LSTM-model2-confusionmatrix.png){width=25%, height=25%}
 
 ### Model 3 (shapelet discovery)
+
+\newpage
 
 ## Transformer
 
@@ -425,7 +515,10 @@ The following chart describe how the comparison with the suspicious activity dif
       Categorical inputs are embedded and transformed via dense layers, while numerical inputs are processed through a dense layer and reshaped.\
       The combined embeddings and numerical features are enhanced with positional encoding and passed through several transformer encoder blocks, followed by convolutional layers, global average pooling, and fully connected layers, ultimately producing a single sigmoid-activated output.
 
-      <p align="center"><img src="pics/Transformer-structure.png" height='80%' width='50%'></p>
+
+  ![Transformer structure](pics/Transformer-structure.png){width=60%, height=60%}
+
+\newpage
 
       - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.\
        This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
@@ -434,19 +527,30 @@ The following chart describe how the comparison with the suspicious activity dif
        This is followed by a dropout layer for regularization and layer normalization to stabilize and speed up training.\
        Finally, a feed-forward neural network with a dense layer, dropout, and another layer normalization is used to further process the attention output, enhancing the model's capacity to capture complex patterns in the data.
 
-       - This model uses Adam optimizer with a **WarmUpCosineDecay** learning rate.\
+       - This model uses Adam optimizer with a <b>WarmUpCosineDecay</b> learning rate.\
        During the warmup phase, the learning rate increases linearly, and once the warmup steps are completed, it follows a cosine decay pattern to gradually reduce the learning rate.
-
-       <p align="center"><img src="pics/Transformer_cosinewarmupdecay.png" height='50%' width='40%'></p>
+       
+  ![Learning rate decay](pics/Transformer_cosinewarmupdecay.png){width=20%, height=20%}
 
    - **Training**:
-      <p align="left">
-         <img src="pics/Transformer_training.png" height='35%' width='45%' />
-         <img src="pics/Transformer_training2.png" height='35%' width='45%' /> 
-      </p>
+
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Transformer_training.png}
+    % \caption{Caption for first image} % optional
+  \end{minipage}\\[1ex] % Adjust the spacing between the rows as needed
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/Transformer_training2.png}
+    % \caption{Caption for second image} % optional
+  \end{minipage}
+  \caption{Transformer accuracy and loss}
+\end{figure}
+
 
    - **Prediction**:
-      <p align="center"><img src="pics/Transformer_confusionmatrix.png"></p>
 
       - Strengths:
          - The model has high accuracy (94.6%).
@@ -456,6 +560,8 @@ The following chart describe how the comparison with the suspicious activity dif
       - Weaknesses:
          - The model still misses some positive instances (10,208 false negatives), which may be critical depending on the context of the application.
          - The imbalance in predictions (zero false positives but some false negatives) could indicate a bias towards negative predictions.
+
+  ![Transformer Confusion matrix](pics/Transformer_confusionmatrix.png){width=25%, height=25%}
 
 
 # Results
@@ -475,14 +581,6 @@ The following chart describe how the comparison with the suspicious activity dif
    - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
    - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
 
-# Application of the Matrix Profile
-
-With the concept of matrix profile, we tried to find conserved behaviours in the data. In fact, a comparison between sequences can be done by looking at the euclidean distance between all the points in two subsequences and represent the distances in a matrix profile.
-
-![Alt Text](pics/pairwise_euclidean_distance.gif)
-
-<p align="center"><img src="pics/Screenshot 2024-05-20 165934.png"></p>
-
 
 # References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
@@ -493,3 +591,5 @@ Authors: Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmey
 [https://arxiv.org/pdf/1106.1813](https://arxiv.org/pdf/1106.1813)
 3. Time Series Shapelets: A New Primitive for Data Mining. Lexiang Ye, Eamonn Keogh
 (https://www.cs.ucr.edu/~eamonn/shaplet.pdf)
+
+</div>
