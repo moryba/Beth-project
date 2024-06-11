@@ -393,13 +393,13 @@ The following chart describe how the comparison with the suspicious activity dif
       ![Model 4 confusion matrix](pics/Dense_conf_matrix_shapelet.png){width=50%, height=40%}
    
 ## Convolutional neural network
-### Model 1
+### Model 5
    - **Description**\
       This model is a Convolutional Neural Network (CNN) with an input shape of (47, 1).\
       It comprises four Conv1D layers with decreasing filter sizes (256, 128, 64, and 32) and ReLU activations, each followed by a dropout layer to prevent overfitting. We applied a Lecun normal initializer for the kernels and a custom random normal initializer for the biases.\
       The output layer is a dense layer with a sigmoid activation function for binary classification.
 
-      ![Conv. neural network - Model 1](pics/Conv-model1-structure.png){width=50%, height=40%}
+      ![Conv. neural network - Model 5](pics/Conv-model1-structure.png){width=50%, height=40%}
 
    - **Training**
 
@@ -415,24 +415,26 @@ The following chart describe how the comparison with the suspicious activity dif
     \includegraphics[width=0.5\textwidth]{pics/Conv-model1-training.png}
     % \caption{Caption for second image} % optional
   \end{minipage}
-  \caption{Model 1 accuracy and loss}
+  \caption{Model 5 accuracy and loss}
 \end{figure}
 
 \newpage
 
    - **Prediction**
+   
+      **Model 5** is consistently predicting 0 on the testing dataset.
       
-      ![Model 1 Confusion matrix](pics/Conv-model1-confusionmatrix.png){width=25%, height=25%}
+      ![Model 5 Confusion matrix](pics/Conv-model1-confusionmatrix.png){width=25%, height=25%}
 
 
-### Model 2
+### Model 6
    - **Description**\
       This model handles categorical and numerical inputs separately, using embeddings and dense layers for preprocessing.\
       It creates embeddings for two categorical features (args and stackaddresses), followed by linear transformations, and processes numerical features through a dense layer and reshaping.\
       The processed embeddings and numerical features are concatenated and passed through two Conv1D layers with ReLU activations for feature extraction.\
       Finally, the output layer is a dense layer with a sigmoid activation function for binary classification.
       
-      ![Conv. neural network - Model 2](pics/Conv-model2-structure.png){width=50%, height=40%}
+      ![Conv. neural network - Model 6](pics/Conv-model2-structure.png){width=50%, height=40%}
 
    - **Training**
 
@@ -448,22 +450,29 @@ The following chart describe how the comparison with the suspicious activity dif
     \includegraphics[width=0.5\textwidth]{pics/Conv-model2-training.png}
     % \caption{Caption for second image} % optional
   \end{minipage}
-  \caption{Model 2 accuracy and loss}
+  \caption{Model 6 accuracy and loss}
 \end{figure}
 
 
    - **Prediction**
-   
-      ![Model 2 Confusion matrix](pics/Conv-model2-confusionmatrix.png){width=25%, height=25%}
+      - True Positives (13,542) and True Negatives (147,686) are high, indicating the model is good at correctly identifying both classes.
+      
+      - False Positives (3,966) are relatively low, suggesting that the model is predicting the unsuspicious data very accurately.
+      
+      - False Negatives (23,773) are high, which is concerning as it indicates the model is frequently missing suspicious data.
+      
+      ![Model 6 Confusion matrix](pics/Conv-model2-confusionmatrix.png){width=25%, height=25%}
 
 ## LSTM neural network
-### Model 1 (no embeddings)
+### Model 7
    - **Description**\
       This model is a Sequential Long Short-Term Memory (LSTM) network designed for sequence data with an input shape of (47, 1).
       It consists of four LSTM layers, each with 32 units and ReLU activations, using Lecun normal initialization for the kernels and a custom random normal initializer for the biases, followed by dropout layers to prevent overfitting.
        The output from the LSTM layers is flattened and passed through a dense layer with 128 units and a final dense layer with a sigmoid activation function for binary classification.
-       
-       ![LSTM - Model 1](pics/LSTM-model1-structure.png){width=50%, height=40%}
+    
+\newpage
+
+  ![LSTM - Model 7](pics/LSTM-model1-structure.png){width=50%, height=40%}
 
    - **Training**
 
@@ -479,21 +488,24 @@ The following chart describe how the comparison with the suspicious activity dif
     \includegraphics[width=0.5\textwidth]{pics/LSTM-model1-training2.png}
     % \caption{Caption for second image} % optional
   \end{minipage}
-  \caption{Model 1 accuracy and loss}
+  \caption{Model 7 accuracy and loss}
 \end{figure}
 
-   
+\newpage
+
    - **Prediction**
       
-      ![Model 1 Confusion matrix](pics/LSTM-model1-confusionmatrix.png){width=25%, height=25%}
+      The confusion matrix indicates that the model is highly effective in identifying unsuspicious activities.
+      However, it still misses 11,584 suspicious instances 
+      
+  ![Model 7 Confusion matrix](pics/LSTM-model1-confusionmatrix.png){width=25%, height=25%}
 
-      The confusion matrix indicates that the model is highly effective in identifying suspicious activities, correctly classifying 159,875 out of 171,459 suspicious instances while maintaining a perfect true negative rate with 17,508 correct unsuspicious classifications.
-      However, it still misses 11,584 suspicious instances
+      
 
-### Model 2
+### Model 8
    - **Description**
    
-      ![LSTM - Model 2](pics/LSTM-model2-structure.png){width=50%, height=40%}
+      ![LSTM - Model 8](pics/LSTM-model2-structure.png){width=50%, height=40%}
       
 \newpage
 
@@ -511,15 +523,15 @@ The following chart describe how the comparison with the suspicious activity dif
     \includegraphics[width=0.5\textwidth]{pics/LSTM-model2-training2.png}
     % \caption{Caption for second image} % optional
   \end{minipage}
-  \caption{Model 2 accuracy and loss}
+  \caption{Model 8 accuracy and loss}
 \end{figure}
 
 
    - **Prediction**
    
-      ![Model 2 Confusion matrix](pics/LSTM-model2-confusionmatrix.png){width=25%, height=25%}
+      ![Model 8 Confusion matrix](pics/LSTM-model2-confusionmatrix.png){width=25%, height=25%}
 
-### Model 3 (shapelet discovery)
+### Model 9 (shapelet discovery)
 
 \newpage
 
@@ -533,17 +545,15 @@ The following chart describe how the comparison with the suspicious activity dif
 
   ![Transformer structure](pics/Transformer-structure.png){width=60%, height=60%}
 
-\newpage
+  - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.\
+    This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
 
-      - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.\
-       This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
+  - The transformer_encoder_block applies multi-head self-attention to the inputs, enabling the model to focus on different parts of the sequence simultaneously.\
+    This is followed by a dropout layer for regularization and layer normalization to stabilize and speed up training.\
+    Finally, a feed-forward neural network with a dense layer, dropout, and another layer normalization is used to further process the attention output, enhancing the model's capacity to capture complex patterns in the data.
 
-       - The transformer_encoder_block applies multi-head self-attention to the inputs, enabling the model to focus on different parts of the sequence simultaneously.\
-       This is followed by a dropout layer for regularization and layer normalization to stabilize and speed up training.\
-       Finally, a feed-forward neural network with a dense layer, dropout, and another layer normalization is used to further process the attention output, enhancing the model's capacity to capture complex patterns in the data.
-
-       - This model uses Adam optimizer with a <b>WarmUpCosineDecay</b> learning rate.\
-       During the warmup phase, the learning rate increases linearly, and once the warmup steps are completed, it follows a cosine decay pattern to gradually reduce the learning rate.
+  - This model uses Adam optimizer with a <b>WarmUpCosineDecay</b> learning rate.\
+    During the warmup phase, the learning rate increases linearly, and once the warmup steps are completed, it follows a cosine decay pattern to gradually reduce the learning rate.
        
   ![Learning rate decay](pics/Transformer_cosinewarmupdecay.png){width=20%, height=20%}
 
