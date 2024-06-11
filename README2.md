@@ -13,6 +13,8 @@ date: "2024-06-11"
 
 <div style="text-align: right">
 
+\newpage
+
 # Introduction 
 The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models [1].
 
@@ -51,6 +53,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 
 ## Features
 Each of this dataset has those features:
+
  - timestamp: time in seconds since system  boot (float)
  
 \newpage
@@ -61,7 +64,7 @@ Each of this dataset has those features:
 
 
  - threadId: id of the thread (integer)
- there is a total of 545 thread ids.
+ there is a total of 545 thread ids. ThreadId and processId seems to have the same distribution.
  
  ![Thread ID](pics/train_threadid_plot.png){width=40%, height=33%}
 
@@ -73,7 +76,9 @@ Each of this dataset has those features:
  ![Parent process ID](pics/train_parentprocessid_plot.png){width=40%, height=33%}
 
  - userId: login integer id (integer)
- 
+    - The dataset is highly imbalanced with respect to user IDs, particularly dominated by user ID "0."
+    - The presence of a few other user IDs with significantly lower frequencies indicates that the data might be heavily skewed towards certain users.
+  
  ![User ID](pics/train_userid_plot.png){width=40%, height=33%}
 
 \newpage
@@ -83,7 +88,9 @@ Each of this dataset has those features:
  ![Mount name space](pics/train_mountnamespace_plot.png){width=40%, height=33%}
 
  - processName: command executed (string)
- 
+    - The dataset is dominated by a few process names, with "ps" being the most frequent.
+    - A large number of process names have very low counts, contributing to a highly skewed distribution.
+    
  ![Process name](pics/train_processname_plot.png){width=40%, height=33%}
 
 \newpage
@@ -99,11 +106,13 @@ Each of this dataset has those features:
 \newpage
 
  - eventName: name of the event (string)
+ EventId and EventName have the same distribution.
  
  ![Event name](pics/train_eventname_plot.png){width=40%, height=33%}
 
  - returnValue: value returned from this event log (integer)
- 
+    - The returnValue of 0 is overwhelmingly dominant, with a count exceeding 500,000. This suggests that the majority of processes or functions in the dataset complete successfully without errors (assuming 0 indicates success).
+
  ![Return value](pics/ReturnValue_barplot.png){width=40%, height=33%}
 
 \newpage
@@ -177,6 +186,8 @@ Each of this dataset has those features:
       - sus and parentProcessId: This correlation is 0.69, indicating that suspicious activities are moderately correlated with parent processes.
       
       - evil and parentProcessId: Correlation of 0.72, indicating a strong association between evil actions and parent processes.
+
+\newpage
 
  - Negative Correlations:
       
@@ -277,6 +288,7 @@ The following chart describe how the comparison with the suspicious activity dif
 \newpage
 
    - **Training**
+      The plot shows that the training accuracy rapidly increases and stabilizes around 0.9996 within a few epochs. However, the validation accuracy remains constant at 0.9998 throughout all epochs, suggesting that the model might be overfitting to the training data or that the validation set might not be sufficiently challenging.
 
 \begin{figure}[h!]
   \centering
@@ -298,16 +310,19 @@ The following chart describe how the comparison with the suspicious activity dif
       
       ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=25%, height=25%}
 
+\newpage
 
 ### Model 2:
    - **Description**
       This model is a neural network that handle differently categorical and numerical features. It incorporates embeddings for the categorical inputs, which are then reshaped and concatenated with numerical inputs, followed by multiple dense layers with ReLU activations and dropout for regularization.
       The final output layer uses a sigmoid activation function to produce a binary classification result.
 
-      ![Dense neural network - Model 2](pics/Dense-model2-structure.png){width=50%, height=40%}
+  ![Dense neural network - Model 2](pics/Dense-model2-structure.png){width=50%, height=40%}
 
    - **Training**
-
+      The training accuracy rapidly increases and stabilizes at approximately 0.998 after the first epoch. In contrast, the validation accuracy remains constant at 0.996 throughout all epochs.
+      Both the training and validation losses decrease sharply during the first epoch and after that remains almost constant with minor fluctuations.
+      
 \newpage
 
 \begin{figure}[h!]
@@ -333,16 +348,16 @@ The following chart describe how the comparison with the suspicious activity dif
 
       ![Model 2 Confusion matrix](pics/Dense2_confusionmatrix.png){width=25%, height=25%}
 
+\newpage
 
 ### Model 3:
    - **Description**
-      This model is similar to **Model 1**, this model is trained on data after appluying Smote data augmentation technic.
+      This model is similar to **Model 1**, it is trained on data after applying Smote data augmentation technic.
       
       ![Dense neural network - Model 3](pics/Dense-smote-structure.png){width=50%, height=40%}
 
-\newpage
-
    - **Training**
+      The validation accuracy increases and stabilizes at nearly 83%, though it remains lower than the training accuracy. This indicates a discrepancy between the training and validation datasets after applying Smote.
 
 \begin{figure}[h!]
   \centering
@@ -361,7 +376,7 @@ The following chart describe how the comparison with the suspicious activity dif
 
 
    - **Prediction**\
-      After applying SMOTE, the model exclusively predicts the "unsuspicious" class and fails to identify any "suspicious" activities. This indicates that the model is not effectively learning from the augmented data, even with the improved balance in our dataset.
+      With SMOTE data, the model exclusively predicts the "unsuspicious" class and fails to identify any "suspicious" activities. This indicates that the model is not effectively learning from the augmented data, even with the improved balance in our dataset.
 
       ![Model 3 Confusion matrix](pics/Dense_smote_confusionmatrix.png){width=25%, height=25%}
 
