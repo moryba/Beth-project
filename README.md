@@ -247,7 +247,8 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
      
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/f826c368-0eba-4a86-b30a-f023234ade41)
 
-   - **Confusion Matrix**
+   - **Confusion Matrix**\
+     The confusion matrix shows that we have few false negatives (913) and few false positives (12). 
      
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/dcad3217-4f43-4b16-91ef-22b8899ce6f7)
 
