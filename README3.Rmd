@@ -1,17 +1,25 @@
 ---
-title: "Beth-project"
-author: "Jamel Belgacem - Moryba Kouate"
+title: "Machine learning on real cybersecurity data"
+author: "Jamel Belgacem - Papa Moryba Kouate"
 date: "`r Sys.Date()`"
 output:
   pdf_document:
     toc: true
     toc_depth: 3
-    number_sections: true 
+    number_sections: true
+  html_document:
+   theme: united
+   highlight: tango
+   css: my.css
+  word_document: default
 header-includes:
   - \usepackage{titlesec}
   - \titleformat{\section}{\large\bfseries\sffamily\color{blue}}{\thesection}{1em}{}
   - \titleformat{\subsection}{\normalsize\bfseries\sffamily\color{blue}}{\thesubsection}{1em}{}
   - \titleformat{\subsubsection}{\small\bfseries\rmfamily\color{blue}}{\thesubsubsection}{1em}{}
+  - \usepackage{etoolbox}
+  - \patchcmd{\tableofcontents}{\chapter*}{\section*}{}{}
+  - \renewcommand{\contentsname}{Table of contents:}
 urlcolor: blue
 papersize: a4
 fontsize: 10pt
@@ -23,8 +31,8 @@ geometry:
 - right=1in
 ---
 
-
 <div style="text-align: right">
+
 \newpage
 # Introduction 
 The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models [1].
@@ -235,7 +243,7 @@ Each of this dataset has those features:
 ## Event Frequency 
 The following chart shows the entire frequency of suspicius and not suspicius event:
 
-![Suspicius and not suspicius event](pics/frequency_sus-notsus.png){width=50%, height=50%}
+![Suspicius and not suspicius event](pics/frequency_sus&notsus.png){width=50%, height=50%}
 
  - Event Frequency: The y-axis represents the frequency of events, ranging from 0 to over 7000.
 
@@ -329,9 +337,10 @@ The following chart describe how the comparison with the suspicious activity dif
 \end{figure}
 
    - **Prediction**\
+
       **Model 1** seems to predict only the "unsuspicious" class and fails to detect any "suspicious" activities, resulting in poor performance for identifying suspicious activities.
-      
-      ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=25%, height=25%}
+
+        ![Model 1 Confusion matrix](pics/Dense_confusionmatrix.png){width=30%, height=30%}
 \newpage
 
 ### Model 2
@@ -366,7 +375,7 @@ The following chart describe how the comparison with the suspicious activity dif
       However, there is still room for improvement in reducing the number of false negatives, which could enhance the model's sensitivity to suspicious activities.
       We have also very low false positive rate for unsuspicious class.
 
-      ![Model 2 Confusion matrix](pics/Dense2_confusionmatrix.png){width=25%, height=25%}
+      ![Model 2 Confusion matrix](pics/Dense2_confusionmatrix.png){width=30%, height=30%}
 \newpage
 
 ### Model 3
@@ -545,6 +554,8 @@ The following chart describe how the comparison with the suspicious activity dif
    
       ![Model 8 Confusion matrix](pics/LSTM-model2-confusionmatrix.png){width=25%, height=25%}
 
+\newpage
+
 ### Model 9
 
    - **Description**\
@@ -561,7 +572,7 @@ The following chart describe how the comparison with the suspicious activity dif
 
 \newpage
 
-  ![Model 9 accuracy and loss](pics/LSTM-model3-training.png){width=50%, height=40%}
+  ![Model 9 accuracy and loss](pics/LSTM-model3-training.png){width=40%, height=40%}
 
    - **Prediction**\
 
@@ -579,7 +590,6 @@ The following chart describe how the comparison with the suspicious activity dif
 
   ![Transformer structure](pics/Transformer-structure.png){width=60%, height=60%}
 
-\newpage
 
       - Positional encoding adds information about the position of each element in the sequence by creating a positional encoding matrix, which applies sinusoidal functions to encode positional information.\
        This matrix is added to the input embeddings, allowing the model to incorporate the order of the sequence elements, which is crucial for the transformer to understand the sequential nature of the data.
@@ -642,6 +652,9 @@ The following chart describe how the comparison with the suspicious activity dif
    - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
    - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
    - The Shapelet Discovery method, when applied to models such as the Decision Tree Classifier or the Dense models on a small sample of 230.000 data points, it gives good accuracy levels. Therefore, this methodology, because of the structure of the BETH dataset (imbalances between the classes) and the high computational level that it requires, it doesn't seem the most effective method.
+   - Embeddings: The use of embeddings significantly enhances the performance of models across the board, particularly for CNN and RNN models.
+   - Model Performance: CNN and RNN models with embeddings, as well as the transformer model, exhibit high accuracy, precision, recall, and ROC scores.
+   - Model Suitability: Dense models without embeddings and LSTM models in the shapelet discovery method underperform, indicating that they may require additional tuning or may not be suitable for this specific task.
 
 \newpage
 
