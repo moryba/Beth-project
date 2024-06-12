@@ -182,8 +182,9 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 #### Model 1:
 
    - **Description**
-      This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer with a single unit and sigmoid activation for binary classification.
-      Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer for the bias.
+      This model is composed with five hidden dense layers each with 512 units and ReLU activation, interspersed with dropout layers for regularization, and an output layer   
+      with a single unit and sigmoid activation for binary classification. Each dense layer uses the 'lecun_normal' initializer for the kernel and a RandomNormal initializer 
+      for the bias.
       
       <p align="center"><img src="pics/Dense-model1-structure.png" height='70%' width='20%'></p>
 
@@ -236,7 +237,9 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
       <p align="center"><img src="pics/Dense_smote_confusionmatrix.png"></p>
 
 #### Model 4- Dense model with the Shapelet Discovery method :
-   - **Description**
+   - **Description**\
+     The model starts with an input layer that receives inputs of shape (1). It then passes through a series of dense layers, each followed by dropout layers for 
+     regularization. The output of the model is a single value.
      
       ![image](https://github.com/JamBelg/Beth-project/assets/24205674/6fdba1a9-2b1f-4550-a04a-bd38b3fe4f63)
 
@@ -341,8 +344,8 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 ### Decision Tree Classifier with Shapelet Discovery method
        
    - **Prediction**\
-The confusuion matrix shows a small number of False Positives (25), which is good as it shows the model rarely predicts class 1 when the true class is 0.
-A relatively low number of False Negatives (1989), indicating the model occasionally misses class 1 predictions. Overall the model seems to learn. 
+     The confusuion matrix shows a small number of False Positives (25), which is good as it shows the model rarely predicts class 1 when the true class is 0.
+     A relatively low number of False Negatives (1989), indicating the model occasionally misses class 1 predictions. Overall the model seems to learn. 
      
      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/f2a66139-dd17-4c7c-bb1f-d0f506833c5c)
 
