@@ -35,7 +35,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 
 
 ### Features
-Each of this dataset (training, valadating and testing dataset) has features showed in the below table:
+Each of this dataset (training, valadating and testing dataset) has features showed in the below table.  We have also created charts that provide visual insight into the frequency distribution of various entities (like host names, process names, threadId) using logarithmic scaling and color gradients to highlight differences in counts.
 
 ![image](https://github.com/JamBelg/Beth-project/assets/24205674/fa6e62ac-e755-4a0b-b9a0-565db09ddfee)
 
@@ -45,21 +45,26 @@ Each of this dataset (training, valadating and testing dataset) has features sho
    
  <p align="center"><img src="pics/train_processid_plot.png"></p>
 
- - threadId: id of the thread (integer)
- there is a total of 545 thread ids.
+ - threadId: id of the thread (integer) there is a total of 545 thread ids. The thread IDs “159”, “1”, “7373”, “7371”, and “7374” follow in decreasing order.
+The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+
  <p align="center"><img src="pics/train_threadid_plot.png"></p>
 
- - parentProcessId: parent process id (integer)
+ - parentProcessId: parent process id (integer) -Parent process ID “187” has the highest count, nearing 100,000 occurrences. Other IDs such as “7099”, “1”, “1469”, “188”, and “1336” show decreasing counts. The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+   
  <p align="center"><img src="pics/train_parentprocessid_plot.png"></p>
 
- - userId: login integer id (integer) - Parent process ID “187” has the highest count, nearing 100,000 occurrences. Other IDs such as “7099”, “1”, “1469”, “188”, and “1336” show decreasing counts. The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+ - userId: login integer id (integer) - The count of occurrences is plotted on a logarithmic scale. The user ID “0” has the highest count, nearing 1,000,000 occurrences.
+Other user IDs such as “101”, “109”, “102”, “1000”, and “103” show decreasing counts. The colors range from dark purple for the least occurrences to light green for the most occurrences.
    
  <p align="center"><img src="pics/train_userid_plot.png"></p>
 
- - mountNamespace: Set mounting restrictions this process log (integer)
+ - mountNamespace: Set mounting restrictions this process log (integer) - The mount namespace with the label “4026531840” has the highest count, reaching close to 100,000 occurrences. Other labels such as “4026532217”, “4026532232”, “4026532229”, “4026532231”, and “4026532288” follow in descending order. The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+   
  <p align="center"><img src="pics/train_mountnamespace_plot.png"></p>
 
- - processName: command executed (string)
+ - processName: command executed (string) - The process “ps” has the highest count, nearing 400,000 occurrences. Other process names such as “systemd-udevd”, “sshd”, “systemd-journal”, and “systemd” follow in decreasing order. A large number of processes are included, some with very small counts compared to “ps”. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+   
  <p align="center"><img src="pics/train_processname_plot.png"></p>
 
  - hostName: host server (string) - The hostname “ubuntu” has the highest count, nearly reaching 200,000 occurrences. Other hostnames such as “ip-10-100-1-57”, “ip-10-100-1-120”, “ip-10-100-1-28”, “ip-10-100-1-55”, and “ip-10-100-1-173” show a descending count, with the least count observed for “ip-10-100-1-79”. The colors range from dark purple for the least occurrences to light green for the most occurrences.
