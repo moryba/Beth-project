@@ -61,7 +61,8 @@ Each of this dataset (training, valadating and testing dataset) has features sho
  - processName: command executed (string)
  <p align="center"><img src="pics/train_processname_plot.png"></p>
 
- - hostName: host server (string)
+ - hostName: host server (string) - The hostname “ubuntu” has the highest count, nearly reaching 200,000 occurrences. Other hostnames such as “ip-10-100-1-57”, “ip-10-100-1-120”, “ip-10-100-1-28”, “ip-10-100-1-55”, and “ip-10-100-1-173” show a descending count, with the least count observed for “ip-10-100-1-79”. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+   
  <p align="center"><img src="pics/train_hostname_plot.png"></p>
 
  - eventId: id of the event generating this log (integer)
