@@ -1,4 +1,4 @@
-# Beth-project
+# Application of various Machine Learning models on real cybersecurity data (BETH dataset) 
 
 ## Introduction 
 The BETH dataset addresses a critical need in cybersecurity research: the availability of real-world, labeled data for anomaly detection. Unlike synthetic datasets, BETH captures genuine host activity and attacks, making it a valuable resource for developing robust machine learning models [1].
@@ -440,7 +440,7 @@ Our experiments with the Shapelet Discovery method showed that while it is theor
 
 **Model-Specific Results**
 
-   1. Dense Neural Networks (DNNs): The DNN models showed varying results, with some models performing well and others not. The use of embeddings in DNNs (Model 2) significantly improved performance compared to models without embeddings. However, Model 3, after applying SMOTE, showed insufficient performance, indicating a lack of learning ability from the augmented data.
+   1. Dense Neural Networks (DNNs): The DNN models showed varying results, with some models performing well and others not. The use of embeddings in DNNs (Model 2) significantly improved performance compared to models without embeddings. However, Model 3, after applying SMOTE, showed insufficient performance, indicating a lack of learning ability from the augmented data. The method os Shapelet Discovery applied on the Dense model shows a good performace on a small sample of data that indicate a potentiality of this method applied to the Dense alghoritm. 
 
    2. Convolutional Neural Networks (CNNs): CNNs, particularly Models 5 and 6, achieved high accuracies and low error rates. This suggests that CNNs are well-suited to recognize structural features in the data, especially when using embeddings.
 
@@ -448,7 +448,7 @@ Our experiments with the Shapelet Discovery method showed that while it is theor
 
    4. Transformer: The transformer showed the best overall performance, particularly through the use of positional encoding and multi-layer self-attention, enhancing its ability to detect complex patterns in the data.
 
-   5. Decision Tree Classifier with Shapelet Discovery: Although this approach had a low number of misclassifications, it was overall less effective than the neural networks.
+   5. Decision Tree Classifier with Shapelet Discovery:  this approach presents a low number of misclassifications and a good accuracy level. 
 
 **Improvement Suggestions**
 
