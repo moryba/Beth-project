@@ -71,9 +71,9 @@ Other user IDs such as “101”, “109”, “102”, “1000”, and “103�
    
  <p align="center"><img src="pics/train_hostname_plot.png"></p>
 
- - eventId: id of the event generating this log (integer)
+ - eventId and eventName: Event IDs and event names are listed in descending order of their counts, from left to right.
+The logarithmic count scale ranges from (10^1) (10) to (10^6). Event ID (or Event Name) “3” has the highest count, exceeding (10^5). Following IDs include “257”, “1005”, “4”, “21”, “1008”, and many others, with gradually fewer occurrences.
 
- - eventName: name of the event (string)
  <p align="center"><img src="pics/train_eventid_plot.png"></p>
  <p align="center"><img src="pics/train_eventname_plot.png"></p>
 
