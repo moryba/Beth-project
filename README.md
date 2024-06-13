@@ -59,7 +59,7 @@ Other user IDs such as “101”, “109”, “102”, “1000”, and “103�
    
  <p align="center"><img src="pics/train_userid_plot.png"></p>
 
- - mountNamespace: Set mounting restrictions this process log (integer) - The mount namespace with the label “4026531840” has the highest count, reaching close to 100,000 occurrences. Other labels such as “4026532217”, “4026532232”, “4026532229”, “4026532231”, and “4026532288” follow in descending order. The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
+ - mountNamespace: Set mounting restrictions this process log (integer) - The mount namespace with the label “4026531840” has the highest count, reaching more than 100,000 occurrences. Other labels such as “4026532217”, “4026532232”, “4026532229”, “4026532231”, and “4026532288” follow in descending order. The counts are plotted on a logarithmic scale. The colors range from dark purple for the least occurrences to light green for the most occurrences.
    
  <p align="center"><img src="pics/train_mountnamespace_plot.png"></p>
 
