@@ -41,7 +41,8 @@ Each of this dataset (training, valadating and testing dataset) has features sho
 
  - timestamp: time in seconds since system  boot (float)
 
- - processId: id of the process spawning this log (integer)
+ - processId: id of the process spawning this log (integer) - The bar chart shows the top 20 process IDs (PIDs) based on their count. The process labeled “Else” has the highest count, far exceeding the counts of any individual Process ID. PID 159 has the second-highest count, noticeably higher than the rest of the process IDs, though much lower than “Else”. Each colored bar represents a distinct process ID, with colors transitioning from dark purple for higher counts to lighter green for lower counts.
+   
  <p align="center"><img src="pics/train_processid_plot.png"></p>
 
  - threadId: id of the thread (integer)
