@@ -412,9 +412,47 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
 
 
 ## Discussion
-   - Most of the models present good validation accuracy and seem to converge rapidly, which could be due to the similarity between the training and validation datasets compared to the testing dataset or because the task is relatively simple.
-   - Most of the models achieve a high recall score for the unsuspicious class (100% for LSTM model1), indicating that unsuspicious instances are well predicted. However, the precision score for the same class does not exceed 63%, which may be due to the larger number of unsuspicious instances in the training dataset.
-   - The Shapelet Discovery method, when applied to models such as the Decision Tree Classifier or the Dense models on a small sample of 230.000 data points, it gives good accuracy levels. Therefore, this methodology, because of the structure of the BETH dataset (imbalances between the classes) and the high computational level that it requires, it doesn't seem the most effective method. 
+The results of our experiments on the BETH dataset reveal a range of insights into the effectiveness of various machine learning models for anomaly detection in the field of cybersecurity. This discussion aims to analyze the performance of the models, identify challenges in data processing and model development, and discuss potential improvement strategies.
+
+**Model Effectiveness**
+
+Most models demonstrated high validation accuracy and converged quickly, indicating a high similarity between the training and validation datasets. This could also suggest that the task is relatively simple, which may not fully reflect real-world challenges. Particularly notable are the CNN and RNN models, which showed a significant performance boost through the use of embeddings. The transformer approach also exhibited high accuracy and F1 scores, underscoring its suitability for complex data patterns.
+
+**Data Processing Challenges**
+
+A major challenge was handling the highly imbalanced dataset. The BETH dataset is characterized by a dominance of non-suspicious events, which affected model performance. Despite using the SMOTE technique to generate synthetic data for the minority class, some models struggled to correctly classify suspicious behavior. This highlights the need for advanced data balancing techniques and the integration of additional features to improve classification.
+
+**Form of Data Preparation**
+
+Our experiments with the Shapelet Discovery method showed that while it is theoretically promising, it did not deliver the expected results in practice due to the structure of the BETH dataset and the high computational power required. The method performed well on smaller samples but was not scalable to the entire dataset. Future work could focus on developing more efficient algorithms for shapelet discovery or exploring alternative feature extraction methods.
+
+**Model-Specific Results**
+
+   1. Dense Neural Networks (DNNs): The DNN models showed varying results, with some models performing well and others not. The use of embeddings in DNNs (Model 2) significantly improved performance compared to models without embeddings. However, Model 3, after applying SMOTE, showed insufficient performance, indicating a lack of learning ability from the augmented data.
+
+   2. Convolutional Neural Networks (CNNs): CNNs, particularly Models 5 and 6, achieved high accuracies and low error rates. This suggests that CNNs are well-suited to recognize structural features in the data, especially when using embeddings.
+
+   3. Recurrent Neural Networks (RNNs): The LSTM models (Models 7 to 9) showed mixed results. While Model 7 exhibited a high capability for detecting suspicious activities, Model 9, which used the Shapelet Discovery method, was ineffective.
+
+   4. Transformer: The transformer showed the best overall performance, particularly through the use of positional encoding and multi-layer self-attention, enhancing its ability to detect complex patterns in the data.
+
+   5. Decision Tree Classifier with Shapelet Discovery: Although this approach had a low number of misclassifications, it was overall less effective than the neural networks.
+
+**Improvement Suggestions**
+
+For future work, we suggest the following approaches:
+
+   1. Advanced Data Augmentation: In addition to SMOTE, other techniques such as GANs (Generative Adversarial Networks) could be used to generate synthetic data.
+
+   2. Feature Engineering: Developing and integrating additional relevant features could further improve model performance.
+
+   3. Model Hybridization: Combining different model approaches could leverage the strengths of individual models and improve overall performance.
+
+   4. Training Strategy Adjustment: Using advanced training strategies such as transfer learning and ensemble learning could enhance the models' generalization ability.
+
+   5. More Efficient Algorithms: Developing more efficient algorithms for methods like Shapelet Discovery could improve the scalability and applicability of these approaches.
+
+In summary, this work highlights the potentials and challenges of using machine learning on real cybersecurity data. Despite the high accuracy of most models, improving sensitivity to suspicious behavior remains a central challenge that needs to be addressed through advanced techniques and approaches.
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research
