@@ -35,7 +35,10 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 
 
 ### Features
-Each of this dataset has those features:
+Each of this dataset (training, valadating and testing dataset) has features showed in the below table:
+
+![image](https://github.com/JamBelg/Beth-project/assets/24205674/fa6e62ac-e755-4a0b-b9a0-565db09ddfee)
+
  - timestamp: time in seconds since system  boot (float)
 
  - processId: id of the process spawning this log (integer)
