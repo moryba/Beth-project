@@ -35,7 +35,7 @@ Data are already divided into training, valadating and testing dataset (60% / 20
 
 
 ### Features
-Each of this dataset (training, valadating and testing dataset) has features showed in the below table.  We have also created charts that provide visual insight into the frequency distribution of various entities (like host names, process names, threadId) using logarithmic scaling and color gradients to highlight differences in counts.
+Each of this dataset (training, valadating and testing dataset) has features showed in the below table.  We have also created charts that provide visual insight into the frequency distribution of various entities (like host names, process names, threadId, etc.) using logarithmic scaling and color gradients to highlight differences in counts.
 
 ![image](https://github.com/JamBelg/Beth-project/assets/24205674/fa6e62ac-e755-4a0b-b9a0-565db09ddfee)
 
