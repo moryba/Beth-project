@@ -468,11 +468,11 @@ In summary, this work highlights the potentials and challenges of using machine 
 
 ## References
 1. BETH Dataset: Real Cybersecurity Data for Anomaly Detection Research \
-Kate Highnam, Kai Arulkumaran, Zachary Hanif, Nicholas R. Jennings \ 
-[https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf](https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf)
+   Kate Highnam, Kai Arulkumaran, Zachary Hanif, Nicholas R. Jennings \
+   [https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf](https://www.gatsby.ucl.ac.uk/~balaji/udl2021/accepted-papers/UDL2021-paper-033.pdf)
 2. Smote: Synthetic Minority Over-sampling Technique \
-Authors: Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmeyer \
-[https://arxiv.org/pdf/1106.1813](https://arxiv.org/pdf/1106.1813)
+   Authors: Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmeyer \
+   [https://arxiv.org/pdf/1106.1813](https://arxiv.org/pdf/1106.1813)
 3. Time Series Shapelets: A New Primitive for Data Mining \
-Authors: Lexiang Ye, Eamonn Keogh \
-[https://www.cs.ucr.edu/~eamonn/shaplet.pdf](https://www.cs.ucr.edu/~eamonn/shaplet.pdf)
+   Authors: Lexiang Ye, Eamonn Keogh \
+   [https://www.cs.ucr.edu/~eamonn/shaplet.pdf](https://www.cs.ucr.edu/~eamonn/shaplet.pdf)
