@@ -253,7 +253,7 @@ For the high computational requiremnts, in order to experiment the **Shapelet Di
      The model starts with an input layer that receives inputs of shape (1). It then passes through a series of dense layers, each followed by dropout layers for 
      regularization. The output of the model is a single value.
      
-      ![image](https://github.com/JamBelg/Beth-project/assets/24205674/6fdba1a9-2b1f-4550-a04a-bd38b3fe4f63)
+     <p align="center"> ![image](https://github.com/JamBelg/Beth-project/assets/24205674/6fdba1a9-2b1f-4550-a04a-bd38b3fe4f63)</p>
 
    - **Training**
      
