@@ -85,7 +85,7 @@ Other user IDs such as “101”, “109”, “102”, “1000”, and “103�
  - returnValue: value returned from this event log (integer)
  <p align="center"><img src="pics/ReturnValue_barplot.png"></p>
 
- - argsNum: number of arguments (integer)
+ - argsNum: number of arguments (integer) - ArgNum indicates the number of dictionaries that contains each Timestamp. And in the plot below you can observe that the most common numbers of arguments for each timestamp are 1, 2, and 4, with 4 being the most dominant by a significant margin.  0, 3, or 5 arguments is relatively rare, with zero and five arguments being the least common. The data shows a non-linear distribution with clear peaks at 1, 2, and 4 arguments.
  <p align="center"><img src="pics/argsNum_barplot.png"></p>
 
  - args: arguments passed to this process (list of dictionaries)
