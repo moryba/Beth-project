@@ -76,7 +76,8 @@ Other user IDs such as “101”, “109”, “102”, “1000”, and “103�
  <p align="center"><img src="pics/train_eventid_plot.png"></p>
  <p align="center"><img src="pics/train_eventname_plot.png"></p>
 
- - stackAddresses: memory values relevant to the process (list of integer) - The image below contains three histograms, each representing the distribution of “Stack addresses list length” across three different datasets: Training, Validation, and Testing. The similarity across the three datasets suggests that a model trained on the training dataset would likely generalize well to the validation and testing datasets. In addition, the histograms depict a clear trend of predominantly shorter stack address list lengths across all datasets, with a high degree of consistency and a pronounced drop-off for longer stack lengths.
+ - stackAddresses: memory values relevant to the process (list of integer)
+   The image below contains three histograms, each representing the distribution of “Stack addresses list length” across three different datasets: Training, Validation, and Testing. The similarity across the three datasets suggests that a model trained on the training dataset would likely generalize well to the validation and testing datasets. In addition, the histograms depict a clear trend of predominantly shorter stack address list lengths across all datasets, with a high degree of consistency and a pronounced drop-off for longer stack lengths.
    
  <p align="center"><img src="pics/train_stackaddresses-length_plot2.png"></p>
  <p align="center"><img src="pics/train_stackaddresses_plot.png"></p>
