@@ -448,7 +448,7 @@ Our experiments with the Shapelet Discovery method showed that while it is theor
 
    4. Transformer: The transformer showed the best overall performance, particularly through the use of positional encoding and multi-layer self-attention, enhancing its ability to detect complex patterns in the data.
 
-   5. Decision Tree Classifier with Shapelet Discovery:  this approach presents a low number of misclassifications and a good accuracy level. 
+   5. Decision Tree Classifier with Shapelet Discovery:  this approach presents a low number of misclassifications and a good accuracy level. However, it has to be considered that a sample of the dataset has been considered in the training and testing of this model and not the entire dataset due to the high computational requirements that the shapelet discovery method 
 
 **Improvement Suggestions**
 
